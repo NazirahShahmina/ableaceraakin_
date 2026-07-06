@@ -31,6 +31,7 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
     </head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 
     <body>
@@ -120,7 +121,24 @@
         </div>
         <!-- Navbar & Hero End -->
 
-     
+      <!-- Modal Search Start 
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h4 class="modal-title mb-0" id="exampleModalLabel">Search by keyword</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        Modal Search End -->
 <!-- Header Start -->
         <div class="container-fluid bg-breadcrumb">
             <div class="bg-breadcrumb-single"></div>
@@ -217,132 +235,64 @@
                 </div>
             </div>
 
-         <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                <div id="formAlert" class="alert d-none mb-3" role="alert"></div>
 
-                    <!-- 
-<?php if(isset($_GET['status']) && $_GET['status'] == 'success'): ?>
-
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-    <strong>Thank you!</strong> Your message has been sent successfully.
-    We will get back to you as soon as possible.
-
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-</div>
-
-<?php endif; ?>
-
-<?php if(isset($_GET['status']) && $_GET['status'] == 'error'): ?>
-
-<div class="alert alert-danger alert-dismissible fade show" role="alert">
-    <strong>Oops!</strong> Failed to send your message.
-    Please try again later.
-
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-</div>
-
-<?php endif; ?> 
--->
-
-    <form action="send-email.php" method="POST">
-
-        <div class="row g-3">
-
-            <!-- Name -->
-            <div class="col-lg-12 col-xl-6">
-                <div class="form-floating">
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        name="name"
-                        placeholder="Your Name"
-                        required>
-                    <label for="name">Your Name <span class="text-danger">*</span></label>
-                </div>
+                <form id="contactForm" novalidate>
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                                <label for="name">Your Name <span class="text-danger">*</span></label>
+                                <div class="invalid-feedback">Please enter your full name.</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                <label for="email">Your Email <span class="text-danger">*</span></label>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="form-floating">
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" pattern="[0-9+\-\s()]{7,15}">
+                                <label for="phone">Your Phone</label>
+                                <div class="invalid-feedback">Enter a valid phone number (digits only).</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="project" name="project" placeholder="Project">
+                                <label for="project">Your Project</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                <label for="subject">Subject <span class="text-danger">*</span></label>
+                                <div class="invalid-feedback">Please enter a subject.</div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 160px"></textarea>
+                                <label for="message">Message <span class="text-danger">*</span></label>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="button-wrapper">
+                                <button type="submit" id="submitBtn" class="btn btn-primary w-100 py-3">
+                                    <span id="btnText">Send Message</span>
+                                    <span id="btnSpinner" class="spinner-border spinner-border-sm d-none ms-2" role="status"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
 
-            <!-- Email -->
-            <div class="col-lg-12 col-xl-6">
-                <div class="form-floating">
-                    <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        name="email"
-                        placeholder="Your Email"
-                        required>
-                    <label for="email">Your Email <span class="text-danger">*</span></label>
-                </div>
-            </div>
-
-            <!-- Phone -->
-            <div class="col-lg-12 col-xl-6">
-                <div class="form-floating">
-                    <input
-                        type="tel"
-                        class="form-control"
-                        id="phone"
-                        name="phone"
-                        placeholder="Phone">
-                    <label for="phone">Your Phone</label>
-                </div>
-            </div>
-
-            <!-- Project -->
-            <div class="col-lg-12 col-xl-6">
-                <div class="form-floating">
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="project"
-                        name="project"
-                        placeholder="Project">
-                    <label for="project">Your Project</label>
-                </div>
-            </div>
-
-            <!-- Subject -->
-            <div class="col-12">
-                <div class="form-floating">
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="subject"
-                        name="subject"
-                        placeholder="Subject"
-                        required>
-                    <label for="subject">Subject <span class="text-danger">*</span></label>
-                </div>
-            </div>
-
-            <!-- Message -->
-            <div class="col-12">
-                <div class="form-floating">
-                    <textarea
-                        class="form-control"
-                        id="message"
-                        name="message"
-                        placeholder="Leave a message here"
-                        style="height:160px"
-                        required></textarea>
-                    <label for="message">Message <span class="text-danger">*</span></label>
-                </div>
-            </div>
-
-            <!-- Submit -->
-            <div class="col-12">
-                <div class="button-wrapper">
-                    <button type="submit" class="btn btn-primary w-100 py-3">
-                        Send Message
-                    </button>
-                </div>
-            </div>
-
-        </div>
-
-    </form>
-
-</div>
             <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="rounded h-100">
                     <iframe class="rounded-top w-100" 
@@ -359,6 +309,49 @@
     </div>
 </div>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+(function(){
+    emailjs.init("dcmvaPtho1U15g5Og"); // paste here
+})();
+
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const btn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const btnSpinner = document.getElementById('btnSpinner');
+    const formAlert = document.getElementById('formAlert');
+
+    btn.disabled = true;
+    btnText.textContent = 'Sending...';
+    btnSpinner.classList.remove('d-none');
+
+    try {
+        await emailjs.sendForm(
+            'shamina0505',   // paste here
+            'template_wg100fr',  // paste here
+            this
+        );
+
+        formAlert.className = 'alert alert-success';
+        formAlert.textContent = '✅ Message sent successfully!';
+        form.reset();
+
+    } catch (error) {
+        console.error(error);
+        formAlert.className = 'alert alert-danger';
+        formAlert.textContent = '❌ Failed to send email.';
+    } finally {
+        formAlert.classList.remove('d-none');
+        btn.disabled = false;
+        btnText.textContent = 'Send Message';
+        btnSpinner.classList.add('d-none');
+    }
+});
+</script>
        <!-- Footer Start -->
 <div class="container-fluid footer py-3 wow fadeIn" data-wow-delay="0.2s">
     <div class="container py-2">
