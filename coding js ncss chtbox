@@ -1,0 +1,360 @@
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+const businessInfo = `
+
+Company Overview
+
+Name: AbleAce Raakin
+Industry: Islamic Finance / Shariah-Compliant Commodity Trading
+Established: 2006
+Experience: 18+ years
+Global Presence: Asia, Middle East, Africa (expanding to US & Europe)
+
+Description:
+AbleAce Raakin is a global award-winning intermediary service provider specializing in Shariah-compliant Commodity Murabahah trading, delivering ethical and sustainable financial solutions.
+
+ARIIMS Trading Platform
+
+(AbleAce Raakin Integrated Islamic Murabaha System)
+
+Web-based trading platform
+Fully Shariah-compliant (certified by Amanie Board)
+Real-time trading
+Secure (SFTP, STP protocols)
+~200,000 transactions yearly
+Accessible via browser
+No hidden charges
+Fixed cost-plus margin
+
+Commodity Murabahah Services
+Shariah-compliant financing method
+No interest (riba)
+Transparent profit margin
+Used by financial institutions globally
+
+Commodities Offered
+Palm Products (CPO, processed, oleochemicals)
+Rubber (SMR, etc.)
+Soy Products
+Cocoa Beans
+Coconut Oil
+
+
+Key Stats
+80+ clients
+~200,000 yearly transactions
+18+ years experience
+
+Awards
+Global Islamic Finance Awards
+Global Banking & Finance Review
+KL Islamic Finance Forum
+Multiple awards (2016–2020)
+📍 Contact Info
+
+Address:
+Suite A-5-5, Megan Avenue 1,
+189 Jalan Tun Razak,
+50400 Kuala Lumpur, Malaysia
+
+Phone:
++603 2161 5166
++603 2161 2164
+
+Email:
+aaraakin@ableace.com
+
+Website:
+www.ableaceraakin.com
+
+Values
+Trust
+Innovation
+Clarity
+Virtue
+Teamwork
+Integrity
+
+
+
+
+
+Tone Instructions:
+Conciseness: Respond in short, informative sentences.
+Formality: Use polite language with slight formality (e.g., "Please let us know," "We are happy to assist").
+Clarity: Avoid technical jargon unless necessary.
+Consistency: Ensure responses are aligned in tone and style across all queries.
+Example: "Thank you for reaching out! Please let us know if you need further assistance."
+
+`;
+
+const API_KEY = "AIzaSyBuAzRnImD7jUZfa1ounNTtexLb_qW5D5w";
+const genAI = new GoogleGenerativeAI(API_KEY);
+const model = genAI.getGenerativeModel({ 
+    model: "gemini-2.5-flash",
+    systemInstruction: businessInfo
+});
+
+let messages = {
+    history: [],
+}
+
+async function sendMessage() {
+
+    console.log(messages);
+    const userMessage = document.querySelector(".chat-window input").value;
+    
+    if (userMessage.length) {
+
+        try {
+            document.querySelector(".chat-window input").value = "";
+            document.querySelector(".chat-window .chat").insertAdjacentHTML("beforeend",`
+                <div class="user">
+                    <p>${userMessage}</p>
+                </div>
+            `);
+
+            document.querySelector(".chat-window .chat").insertAdjacentHTML("beforeend",`
+                <div class="loader"></div>
+            `);
+
+            const chat = model.startChat(messages);
+
+            let result = await chat.sendMessageStream(userMessage);
+            
+            document.querySelector(".chat-window .chat").insertAdjacentHTML("beforeend",`
+                <div class="model">
+                    <p></p>
+                </div>
+            `);
+            
+            let modelMessages = '';
+
+            for await (const chunk of result.stream) {
+              const chunkText = chunk.text();
+              modelMessages = document.querySelectorAll(".chat-window .chat div.model");
+              modelMessages[modelMessages.length - 1].querySelector("p").insertAdjacentHTML("beforeend",`
+                ${chunkText}
+            `);
+            }
+
+            messages.history.push({
+                role: "user",
+                parts: [{ text: userMessage }],
+            });
+
+            messages.history.push({
+                role: "model",
+                parts: [{ text: modelMessages[modelMessages.length - 1].querySelector("p").innerHTML }],
+            });
+
+        } catch (error) {
+            document.querySelector(".chat-window .chat").insertAdjacentHTML("beforeend",`
+                <div class="error">
+                    <p>The message could not be sent. Please try again.</p>
+                </div>
+            `);
+        }
+
+        document.querySelector(".chat-window .chat .loader").remove();
+        
+    }
+}
+
+document.querySelector(".chat-window .input-area button")
+.addEventListener("click", ()=>sendMessage());
+
+document.querySelector(".chat-button")
+.addEventListener("click", ()=>{
+    document.querySelector("body").classList.add("chat-open");
+});
+
+document.querySelector(".chat-window button.close")
+.addEventListener("click", ()=>{
+    document.querySelector("body").classList.remove("chat-open");
+});
+
+
+//css
+
+/* Body class to show chat */
+body.chat-open {
+    .chat-window {
+        display: flex;
+    }
+}
+
+/* Chat toggle button */
+.chat-button {
+    position: absolute;
+    bottom: 40px; /* slightly higher for smaller chatbox */
+    right: 15px;
+    z-index: 998;
+    background-color: var(--black);
+    color: white;
+    height: 60px; /* smaller button */
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+        width: 35px; /* smaller icon */
+    }
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+}
+
+/* Chatbox window */
+.chat-window {
+
+    * {
+        font-family: "Raleway", sans-serif;
+    }
+
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 999;
+    bottom: 110px; /* slightly higher to avoid overlapping button */
+    right: 20px;
+    height: 500px; /* slightly shorter */
+    width: 320px;  /* slightly narrower */
+    max-width: 90%; /* responsive */
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* Add top padding to prevent content from being cut off */
+    padding-top: 40px;
+
+    .close {
+        position: absolute; /* stay on top */
+        top: 0;
+        left: 0;
+        width: 100%;
+        border: none;
+        padding: 8px 0;
+        background-color: var(--black);
+        color: white;
+        border-radius: 20px 20px 0 0;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .chat {
+        flex: 1;
+        padding: 0 8px;
+        overflow-y: scroll;
+
+        p {
+            border-radius: 20px;
+            width: 80%;
+            margin: 8px 0;
+            font-size: 16px;
+            padding: 16px;
+        }
+
+        div.model {
+            p {
+                background-color: var(--grey);
+            }
+        }
+
+        div.user {
+            display: flex;
+            justify-content: flex-end;
+
+            p {
+                background-color: var(--blue);
+                color: white;
+            }
+        }
+
+        div.error {
+            p {
+                font-size: 14px;
+                text-align: center;
+                color: red;
+            }
+        }
+    }
+
+    .input-area {
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 8px;
+        border-top: 1px solid lightgray;
+
+        input {
+            height: 40px;
+            flex: 1;
+            border: none;
+            background-color: var(--grey);
+            border-radius: 20px;
+            padding-left: 20px;
+            font-size: 16px;
+        }
+
+        button {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: none;
+            margin-left: 12px;
+            background-color: var(--blue);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                width: 18px;
+            }
+
+            &:hover {
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+        }
+    }
+}
+
+/* Loader animation */
+.loader {
+    width: 40px;
+    opacity: 0.4;
+    aspect-ratio: 4;
+    background: radial-gradient(circle closest-side,#000 90%,#0000) 0/calc(100%/3) 100% space;
+    clip-path: inset(0 100% 0 0);
+    animation: l1 1.5s steps(4) infinite;
+}
+@keyframes l1 {
+    to { clip-path: inset(0 -34% 0 0); }
+}
+
+/* Responsive tweak for mobile screens */
+@media (max-width: 480px) {
+    .chat-window {
+        width: 90%;
+        height: 450px;
+        bottom: 100px;
+        right: 5%;
+        padding-top: 35px;
+    }
+
+    .chat-button {
+        height: 50px;
+        width: 50px;
+        img {
+            width: 28px;
+        }
+    }
+}

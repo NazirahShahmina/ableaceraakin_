@@ -1,0 +1,535 @@
+ <!-- ═══════════════════════════════════════════
+     WHY CHOOSE ARIIMS (CORPORATE LAYOUT)
+════════════════════════════════════════════ -->
+<div class="container-fluid bg-light py-5">
+    
+    <!-- 🔥 ADDED MAX WIDTH TO SQUEEZE CONTENT -->
+    <div class="container" style="max-width:1050px;">
+
+        <!-- Header -->
+        <div class="text-center mx-auto pb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width:800px;">
+
+            <p class="text-primary text-uppercase fw-semibold mb-1">
+                Why Choose ARIIMS?
+            </p>
+
+            <div class="divider-bar"></div>
+
+            <h2 class="fw-bold mb-3">ARIIMS Trading Platform</h2>
+
+            <p class="text-muted small">
+               AbleAce Raakin Integrated Islamic Murabaha System (ARIIMS) is AbleAce Raakin’s online solution for the convenience of Commodity Murabahah transactions for the convenience of AbleAce Raakin's Clients to conduct commodity Murabahah transactions. Its architecture, design and security were developed with guidance by the Central Bank of Malaysia. The Platform was fully vetted and certified by Amanie Shariah Supervisory Board in 2009.
+            </p>
+        </div>
+
+        <!-- ═════════ 3 KEY PILLARS ═════════ -->
+        <div class="row g-4 mb-5 justify-content-center wow fadeInUp"
+            data-wow-delay="0.2s">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="p-4 bg-white shadow-sm h-100 position-relative"
+                    style="border-radius:12px; border-top:4px solid #0d6efd;">
+                    
+                    <div class="mb-3 text-primary">
+                        <i class="fas fa-shield-alt fa-2x"></i>
+                    </div>
+
+                    <h5 class="fw-bold mb-2">Secure</h5>
+                    <p class="text-muted small mb-0">
+                        With various securities features implemented on Back-End of ARIIMS trading Platform such as SFTP and STP Protocols, we ensure our platform is secured and resilient to protect client data.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="p-4 bg-white shadow-sm h-100 position-relative"
+                    style="border-radius:12px; border-top:4px solid #198754;">
+
+                    <div class="mb-3 text-success">
+                        <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
+
+                    <h5 class="fw-bold mb-2">Authentic</h5>
+                    <p class="text-muted small mb-0">
+                        AbleAce Raakin ensures authenticity in every transaction, processing more than 200,000 transactions annually with full Shariah compliance and zero breach tolerance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="p-4 bg-white shadow-sm h-100 position-relative"
+                    style="border-radius:12px; border-top:4px solid #ffc107;">
+
+                    <div class="mb-3 text-warning">
+                        <i class="fas fa-laptop fa-2x"></i>
+                    </div>
+
+                    <h5 class="fw-bold mb-2">Convenient</h5>
+                    <p class="text-muted small mb-0">
+                        ARIIMS is accessible via any web browser and supports interface customization with multiple themes for a personalised client experience.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ═════════ SERVICES GRID ═════════ -->
+
+        <!-- SERVICES HEADER -->
+<div class="text-center mx-auto mb-4 wow fadeInUp"
+    data-wow-delay="0.25s"
+    style="max-width:700px;">
+
+    <p class="text-primary text-uppercase fw-semibold mb-1">
+        Platform Capabilities
+    </p>
+
+    <div class="divider-bar"></div>
+
+    <h3 class="fw-bold mb-2">Core Services & Features</h3>
+
+    <p class="text-muted small">
+        A comprehensive suite of digital trading capabilities designed to ensure efficiency, compliance, and seamless transaction execution across all operations.
+    </p>
+</div>
+       <!-- ═════════ SERVICES GRID FULL ═════════ -->
+<div class="row g-4 mb-5 justify-content-center wow fadeInUp"
+    data-wow-delay="0.3s">
+
+    <div class="col-md-6 col-lg-4">
+        <div class="p-4 bg-white shadow-sm h-100" style="border-radius:12px;">
+            <i class="fas fa-check-double text-primary mb-2"></i>
+            <h6 class="fw-bold">Fail-Proof Process</h6>
+            <p class="text-muted small mb-0">Processes are Fail-Proof from potential Shariah breach.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="p-4 bg-white shadow-sm h-100" style="border-radius:12px;">
+            <i class="fas fa-exchange-alt text-primary mb-2"></i>
+            <h6 class="fw-bold">E-Transaction</h6>
+            <p class="text-muted small mb-0">E-transaction of the trading authenticity.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="p-4 bg-white shadow-sm h-100" style="border-radius:12px;">
+            <i class="fas fa-lock text-primary mb-2"></i>
+            <h6 class="fw-bold">Security Measures</h6>
+            <p class="text-muted small mb-0">High standard of security measures for user.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="p-4 bg-white shadow-sm h-100" style="border-radius:12px;">
+            <i class="fas fa-network-wired text-primary mb-2"></i>
+            <h6 class="fw-bold">Open Gateway</h6>
+            <p class="text-muted small mb-0">Open gateway at your convenience & time zones.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="p-4 bg-white shadow-sm h-100" style="border-radius:12px;">
+            <i class="fas fa-file-alt text-primary mb-2"></i>
+            <h6 class="fw-bold">E-Documentation</h6>
+            <p class="text-muted small mb-0">E-documentation of Purchase Service Agreement.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="p-4 bg-white shadow-sm h-100" style="border-radius:12px;">
+            <i class="fas fa-chart-line text-primary mb-2"></i>
+            <h6 class="fw-bold">Real-Time Updates</h6>
+            <p class="text-muted small mb-0">Real-time stocks availability updates.</p>
+        </div>
+    </div>
+
+</div><!-- V3 MODULE HEADER -->
+<div class="text-center mx-auto mb-4 wow fadeInUp"
+    data-wow-delay="0.35s"
+    style="max-width:700px;">
+
+    <p class="text-primary text-uppercase fw-semibold mb-1">
+        System Architecture
+    </p>
+
+    <div class="divider-bar"></div>
+
+    <h3 class="fw-bold mb-2">ARIIMS V3 Technology Stack</h3>
+
+    <p class="text-muted small">
+        A next-generation trading infrastructure built with advanced protocols and secure architecture to support high-volume Shariah-compliant commodity transactions.
+    </p>
+</div>
+
+
+
+        <!-- ═════════ ARIIMS V3 MODULE ═════════ -->
+        <div class="bg-white p-4 p-lg-5 shadow-sm wow fadeInUp"
+            data-wow-delay="0.4s"
+            style="border-radius:14px; border-left:5px solid #0d6efd;">
+
+            <h4 class="fw-bold mb-3">ARIIMS V3 Module</h4>
+
+            <p class="text-muted small mb-4">
+                ARIIMS is our latest version of trading platform. To ensure its safety, we have implemented multiple protection protocols that meet current security standards.
+            </p>
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-4">
+                    <i class="fas fa-server text-primary mb-2"></i>
+                    <h6 class="fw-bold">SFTP</h6>
+                    <p class="text-muted small mb-0">
+                        Processes thousands of transactions simultaneously using secure file transfer protocols for CASA products.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <i class="fas fa-bolt text-primary mb-2"></i>
+                    <h6 class="fw-bold">STP</h6>
+                    <p class="text-muted small mb-0">
+                        Machine-to-machine execution of trades within seconds without multiple applications.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <i class="fas fa-globe text-primary mb-2"></i>
+                    <h6 class="fw-bold">Web Portal</h6>
+                    <p class="text-muted small mb-0">
+                        Integrated system improving customer experience in tawarruq transactions with single agency requirements.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+            
+<!-- ═══════════════════════════════════════════
+     SECTION 5 — CTA STRIP (COMMODITY MURABAHAH INTRO)
+════════════════════════════════════════════ -->
+
+   <!-- ═══════════════════════════════════════════
+             SECTION 5 — CTA STRIP
+        ════════════════════════════════════════════ -->
+        <div class="container-fluid bg-light py-5">
+            <div class="container py-2">
+                <div class="row align-items-center g-4 wow fadeInUp" data-wow-delay="0.1s">
+
+                    <div class="col-lg-8">
+                        <p class="section-tag text-primary text-uppercase fw-semibold mb-1">Commodity Murabahah</p>
+                        <h2 class="fw-bold mb-2">                    Understanding Shariah-Compliant Commodity Trading
+</h2>
+                        <p class="text-muted small mb-0">                    Commodity Murabahah is a Shariah-compliant sales structure where commodities are sold at a transparent cost-plus margin. It ensures a fixed and agreed selling price without interest, providing clarity, fairness, and financial security.                     It is widely used in Islamic finance to support various financial products for both institutions and individuals. AbleAce Raakin ensures the availability of compliant commodities and strict adherence to Shariah principles in every transaction.
+
+</p>
+                    </div>
+
+                    <div class="col-lg-4 text-lg-end d-flex flex-wrap gap-2 justify-content-lg-end">
+                        <a href="project.html" class="btn btn-primary py-1 px-4">
+                            Read More <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                       
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Section 5 End -->
+           
+<!-- ═══════════════════════════════════════════
+     SECTION 5 — CTA STRIP (COMMODITY MURABAHAH INTRO)
+════════════════════════════════════════════ -->
+
+
+
+
+    <!-- s Start -->
+<div class="container-fluid py-5 bg-light">
+    <div class="container py-5">
+
+        <div class="row g-5 align-items-center">
+
+            <!-- TEXT SIDE -->
+            <div class="col-lg-6 wow fadeInLeft">
+                <h4 class="text-primary">ARIIMS Trading Platform</h4>
+
+                <p>
+Our Trading platform, ARIIMS (Ableace Raakin Integrated Islamic Murabaha System) is an innovative web-based solutions designed to facilitate Shariah-compliant commodity trading for commodity murabaha requirements. ARIIMS enables seamless, transparent, and secure trading by adhering strictly to Islamic finance principles.
+                </p>
+
+                <p>
+Through ARIIMS, clients can effortlessly participate in commodity trading, with complete confidence. Our platform offers real-time access to a diverse range of commodities, ensuring consistent availability and a clear, fixed cost-plus margin structure with no hidden charges. By leveraging the power of technology, ARIIMS simplifies the process of managing, trading, and tracking your commodity investments in a compliant and efficient manner.                </p>
+ <p>
+Ableace Raakin’s commitment in providing secured and Shariah-adherent trading solutions guarantees certainty and peace of mind for all clients.                </p>
+               
+            </div>
+
+            <!-- IMAGE SIDE -->
+            <div class="col-lg-6 wow fadeInRight">
+                <div class="bg-secondary rounded" style="height: 400px;">
+                    <!-- IMAGE PLACEHOLDER (insert later) -->
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- Commodity Murabahah End --> 
+
+
+      <!-- ═══════════════════════════════════════════
+     WHY CHOOSE ARIIMS (CORPORATE LAYOUT)
+════════════════════════════════════════════ -->
+<div class="container-fluid bg-light py-5">
+    
+    <!-- 🔥 ADDED MAX WIDTH TO SQUEEZE CONTENT -->
+    <div class="container" style="max-width:1050px;">
+
+        <!-- Header -->
+        <div class="text-center mx-auto pb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width:800px;">
+
+            <p class="text-primary text-uppercase fw-semibold mb-1">
+                Why Choose ARIIMS?
+            </p>
+
+            <div class="divider-bar"></div>
+
+            <h2 class="fw-bold mb-3">ARIIMS Trading Platform</h2>
+
+            <p class="text-muted small">
+               AbleAce Raakin Integrated Islamic Murabaha System (ARIIMS) is AbleAce Raakin’s online solution for the convenience of Commodity Murabahah transactions for the convenience of AbleAce Raakin's Clients to conduct commodity Murabahah transactions. Its architecture, design and security were developed with guidance by the Central Bank of Malaysia. The Platform was fully vetted and certified by Amanie Shariah Supervisory Board in 2009.
+            </p>
+        </div>
+
+        <!-- ═════════ 3 KEY PILLARS ═════════ -->
+        <div class="row g-4 mb-5 justify-content-center wow fadeInUp"
+            data-wow-delay="0.2s">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="p-4 bg-white shadow-sm h-100 position-relative"
+                    style="border-radius:12px; border-top:4px solid #0d6efd;">
+                    
+                    <div class="mb-3 text-primary">
+                        <i class="fas fa-shield-alt fa-2x"></i>
+                    </div>
+
+                    <h5 class="fw-bold mb-2">Secure</h5>
+                    <p class="text-muted small mb-0">
+                        With various securities features implemented on Back-End of ARIIMS trading Platform such as SFTP and STP Protocols, we ensure our platform is secured and resilient to protect client data.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="p-4 bg-white shadow-sm h-100 position-relative"
+                    style="border-radius:12px; border-top:4px solid #198754;">
+
+                    <div class="mb-3 text-success">
+                        <i class="fas fa-check-circle fa-2x"></i>
+                    </div>
+
+                    <h5 class="fw-bold mb-2">Authentic</h5>
+                    <p class="text-muted small mb-0">
+                        AbleAce Raakin ensures authenticity in every transaction, processing more than 200,000 transactions annually with full Shariah compliance and zero breach tolerance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="p-4 bg-white shadow-sm h-100 position-relative"
+                    style="border-radius:12px; border-top:4px solid #ffc107;">
+
+                    <div class="mb-3 text-warning">
+                        <i class="fas fa-laptop fa-2x"></i>
+                    </div>
+
+                    <h5 class="fw-bold mb-2">Convenient</h5>
+                    <p class="text-muted small mb-0">
+                        ARIIMS is accessible via any web browser and supports interface customization with multiple themes for a personalised client experience.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ═════════ SERVICES GRID ═════════ -->
+
+        <!-- SERVICES HEADER -->
+<div class="text-center mx-auto mb-4 wow fadeInUp"
+    data-wow-delay="0.25s"
+    style="max-width:700px;">
+
+    <p class="text-primary text-uppercase fw-semibold mb-1">
+        Platform Capabilities
+    </p>
+
+    <div class="divider-bar"></div>
+
+    <h3 class="fw-bold mb-2">Core Services & Features</h3>
+
+    <p class="text-muted small">
+        A comprehensive suite of digital trading capabilities designed to ensure efficiency, compliance, and seamless transaction execution across all operations.
+    </p>
+</div>
+       <!-- ═════════ SERVICES GRID FULL ═════════ -->
+<div class="row g-4 mb-5 justify-content-center wow fadeInUp"
+    data-wow-delay="0.3s">
+
+    <div class="col-md-6 col-lg-4">
+        <div class="p-4 bg-white shadow-sm h-100" style="border-radius:12px;">
+            <i class="fas fa-check-double text-primary mb-2"></i>
+            <h6 class="fw-bold">Fail-Proof Process</h6>
+            <p class="text-muted small mb-0">Processes are Fail-Proof from potential Shariah breach.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="p-4 bg-white shadow-sm h-100" style="border-radius:12px;">
+            <i class="fas fa-exchange-alt text-primary mb-2"></i>
+            <h6 class="fw-bold">E-Transaction</h6>
+            <p class="text-muted small mb-0">E-transaction of the trading authenticity.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="p-4 bg-white shadow-sm h-100" style="border-radius:12px;">
+            <i class="fas fa-lock text-primary mb-2"></i>
+            <h6 class="fw-bold">Security Measures</h6>
+            <p class="text-muted small mb-0">High standard of security measures for user.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="p-4 bg-white shadow-sm h-100" style="border-radius:12px;">
+            <i class="fas fa-network-wired text-primary mb-2"></i>
+            <h6 class="fw-bold">Open Gateway</h6>
+            <p class="text-muted small mb-0">Open gateway at your convenience & time zones.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="p-4 bg-white shadow-sm h-100" style="border-radius:12px;">
+            <i class="fas fa-file-alt text-primary mb-2"></i>
+            <h6 class="fw-bold">E-Documentation</h6>
+            <p class="text-muted small mb-0">E-documentation of Purchase Service Agreement.</p>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="p-4 bg-white shadow-sm h-100" style="border-radius:12px;">
+            <i class="fas fa-chart-line text-primary mb-2"></i>
+            <h6 class="fw-bold">Real-Time Updates</h6>
+            <p class="text-muted small mb-0">Real-time stocks availability updates.</p>
+        </div>
+    </div>
+
+</div><!-- V3 MODULE HEADER -->
+<div class="text-center mx-auto mb-4 wow fadeInUp"
+    data-wow-delay="0.35s"
+    style="max-width:700px;">
+
+    <p class="text-primary text-uppercase fw-semibold mb-1">
+        System Architecture
+    </p>
+
+    <div class="divider-bar"></div>
+
+    <h3 class="fw-bold mb-2">ARIIMS V3 Technology Stack</h3>
+
+    <p class="text-muted small">
+        A next-generation trading infrastructure built with advanced protocols and secure architecture to support high-volume Shariah-compliant commodity transactions.
+    </p>
+</div>
+
+
+
+        <!-- ═════════ ARIIMS V3 MODULE ═════════ -->
+        <div class="bg-white p-4 p-lg-5 shadow-sm wow fadeInUp"
+            data-wow-delay="0.4s"
+            style="border-radius:14px; border-left:5px solid #0d6efd;">
+
+            <h4 class="fw-bold mb-3">ARIIMS V3 Module</h4>
+
+            <p class="text-muted small mb-4">
+                ARIIMS is our latest version of trading platform. To ensure its safety, we have implemented multiple protection protocols that meet current security standards.
+            </p>
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-4">
+                    <i class="fas fa-server text-primary mb-2"></i>
+                    <h6 class="fw-bold">SFTP</h6>
+                    <p class="text-muted small mb-0">
+                        Processes thousands of transactions simultaneously using secure file transfer protocols for CASA products.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <i class="fas fa-bolt text-primary mb-2"></i>
+                    <h6 class="fw-bold">STP</h6>
+                    <p class="text-muted small mb-0">
+                        Machine-to-machine execution of trades within seconds without multiple applications.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <i class="fas fa-globe text-primary mb-2"></i>
+                    <h6 class="fw-bold">Web Portal</h6>
+                    <p class="text-muted small mb-0">
+                        Integrated system improving customer experience in tawarruq transactions with single agency requirements.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+            
+<!-- ═══════════════════════════════════════════
+     SECTION 5 — CTA STRIP (COMMODITY MURABAHAH INTRO)
+════════════════════════════════════════════ -->
+
+   <!-- ═══════════════════════════════════════════
+             SECTION 5 — CTA STRIP
+        ════════════════════════════════════════════ -->
+        <div class="container-fluid bg-light py-5">
+            <div class="container py-2">
+                <div class="row align-items-center g-4 wow fadeInUp" data-wow-delay="0.1s">
+
+                    <div class="col-lg-8">
+                        <p class="section-tag text-primary text-uppercase fw-semibold mb-1">Commodity Murabahah</p>
+                        <h2 class="fw-bold mb-2">                    Understanding Shariah-Compliant Commodity Trading
+</h2>
+                        <p class="text-muted small mb-0">                    Commodity Murabahah is a Shariah-compliant sales structure where commodities are sold at a transparent cost-plus margin. It ensures a fixed and agreed selling price without interest, providing clarity, fairness, and financial security.                     It is widely used in Islamic finance to support various financial products for both institutions and individuals. AbleAce Raakin ensures the availability of compliant commodities and strict adherence to Shariah principles in every transaction.
+
+</p>
+                    </div>
+
+                    <div class="col-lg-4 text-lg-end d-flex flex-wrap gap-2 justify-content-lg-end">
+                        <a href="project.html" class="btn btn-primary py-1 px-4">
+                            Read More <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                       
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Section 5 End -->
+           
+<!-- ═══════════════════════════════════════════
+     SECTION 5 — CTA STRIP (COMMODITY MURABAHAH INTRO)
+════════════════════════════════════════════ -->

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>About Us - AbleAce Raakin</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            /* ── Stat Cards ── */
+            .stat-card {
+                border-radius: 10px;
+                padding: 1.6rem 1.25rem;
+                height: 100%;
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            .stat-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 28px rgba(0,0,0,0.13) !important;
+            }
+            .stat-number {
+                font-size: 2.4rem;
+                font-weight: 700;
+                line-height: 1.1;
+            }
+            .stat-label {
+                font-size: 0.72rem;
+                letter-spacing: 1.2px;
+                text-transform: uppercase;
+                font-weight: 600;
+                opacity: 0.7;
+            }
+
+            /* ── Value / Why-We-Exist Cards ── */
+            .value-card {
+                border-radius: 10px;
+                padding: 1.75rem 1.5rem;
+                height: 100%;
+                background: #fff;
+                border-top: 4px solid var(--bs-primary, #0d6efd);
+                box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+            }
+            .value-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.11);
+            }
+            .value-card .icon-wrap {
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+                background: rgba(13,110,253,0.1);
+                color: var(--bs-primary, #0d6efd);
+            }
+
+            /* ── Platform Feature List ── */
+            .feature-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.85rem;
+                padding: 0.9rem 1rem;
+                border-radius: 8px;
+                background: #fff;
+                box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+                margin-bottom: 0.85rem;
+            }
+            .feature-item:last-child { margin-bottom: 0; }
+            .feature-item .fi-icon {
+                width: 38px;
+                height: 38px;
+                border-radius: 8px;
+                background: var(--bs-primary, #0d6efd);
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.9rem;
+                flex-shrink: 0;
+                margin-top: 2px;
+            }
+
+            /* ── Section helpers ── */
+            .section-tag {
+                letter-spacing: 2px;
+                font-size: 0.8rem;
+            }
+            .divider-bar {
+                width: 48px;
+                height: 3px;
+                border-radius: 2px;
+                background: var(--bs-primary, #0d6efd);
+                margin: 0.6rem auto 1rem;
+            }
+
+
+            /* Custom Professional Button Styles */
+            .btn-premium {
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 1px !important;
+                border-radius: 4px !important; /* Clean geometric edges */
+                padding: 0.7rem 1.75rem !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+            }
+
+            /* Primary Button Styling */
+            .btn-premium.btn-primary {
+                border: 1px solid transparent !important;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            }
+            .btn-premium.btn-primary:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
+
+            /* Outline Button Styling */
+            .btn-premium.btn-outline-primary {
+                border: 1px solid #dee2e6 !important;
+                color: #495057 !important;
+            }
+            .btn-premium.btn-outline-primary:hover {
+                background-color: var(--bs-primary) !important;
+                border-color: var(--bs-primary) !important;
+                color: #fff !important;
+                transform: translateY(-1px);
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar Start -->
+        <div class="container-fluid sticky-top px-0">
+            <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;"></div>
+            <div class="container px-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+                    <a href="index.html" class="navbar-brand p-0">
+                        <img src="assets/img/AAR.svg" alt="AbleAce Raakin Logo" class="logo-img">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="about.html" class="nav-item nav-link active">About Us</a>
+                            <a href="service.html" class="nav-item nav-link">ARIIMS</a>
+                            <a href="project.html" class="nav-item nav-link">Commodities</a>
+                            <a href="404.html" class="nav-item nav-link">Governance</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Insights</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="blog.html" class="dropdown-item">Media Exposure</a>
+                                    <a href="faqs.html" class="dropdown-item">FAQs</a>
+                                </div>
+                            </div>
+                             <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contact Us</a>
+                         <div class="dropdown-menu m-0">
+                            <a href="contact.html" class="dropdown-item">ContactS Us</a>
+                            <a href="careers.html" class="dropdown-item">Careers</a>
+                        </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="bg-breadcrumb-single"></div>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="about.html">About Us</a></li>
+                    <li class="breadcrumb-item active text-primary">Overview</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Header End -->
+
+    
+
+
+        <!-- ═══════════════════════════════════════════
+             SECTION 1 — WHO WE ARE
+        ════════════════════════════════════════════ -->
+        <div class="container-fluid bg-light py-5">
+            <div class="container py-2">
+                <div class="row g-5 align-items-center">
+
+                  <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+    <div class="position-relative">
+<img src="assets/img/about_us.jpg" 
+             class="img-fluid w-100 rounded shadow"
+             alt="AbleAce Raakin Intelligent Commodity Trading"
+             style="object-fit: cover; max-height: 440px; min-height: 400px;">
+   
+                            <!-- Floating Badge -->
+                            <div class="position-absolute bg-primary text-white rounded p-3 shadow"
+                                 style="bottom: -18px; right: 20px; min-width: 140px; text-align: center;">
+                                <div style="font-size:1.6rem; font-weight:700; line-height:1;">20+</div>
+                                <div style="font-size:0.72rem; letter-spacing:1px; text-transform:uppercase; opacity:0.85;">Years of Excellence</div>
+                            </div>
+                        </div>
+  </div>
+                    <!-- Text -->
+                    <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
+                        <p class="section-tag text-primary text-uppercase fw-semibold mb-1">Who We Are</p>
+                        <h2 class="fw-bold mb-3" style="line-height:1.3;">
+                            Powering Intelligent Commodity Trading
+                        </h2>
+                        <p class="text-muted mb-3" style="text-align:justify; font-size:0.93rem;">
+                            AbleAce Raakin is a technology-driven commodity trading company focused on advancing modern market operations through intelligent digital infrastructure and Shariah-compliant trading solutions. Through the <strong>ARIIMS Digital Commodity Murabahah Trading Platform</strong>, we deliver a secure, transparent, and efficient trading ecosystem that supports operational excellence and market connectivity across the global commodity landscape.
+                        </p>
+                        <p class="text-muted mb-4" style="text-align:justify; font-size:0.93rem;">
+                            By combining innovation, strategic expertise, and ethical business practices, we empower businesses with smarter trading operations, enhanced governance, and future-ready digital capabilities — building long-term partnerships while shaping the future of digital commodity trading.
+                        </p>
+
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <p class="mb-2 small"><i class="fas fa-check-circle text-primary me-2"></i>Shariah-Certified Platform</p>
+                                <p class="mb-2 small"><i class="fas fa-check-circle text-primary me-2"></i>Real-Time Trade Execution</p>
+                                <p class="mb-0 small"><i class="fas fa-check-circle text-primary me-2"></i>End-to-End Digital Workflow</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="mb-2 small"><i class="fas fa-check-circle text-primary me-2"></i>Global Client Network</p>
+                                <p class="mb-2 small"><i class="fas fa-check-circle text-primary me-2"></i>Transparent Governance</p>
+                                <p class="mb-0 small"><i class="fas fa-check-circle text-primary me-2"></i>Multi-Region Operations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Section 1 End -->
+
+
+        <!-- ═══════════════════════════════════════════
+             SECTION 2 — OUR IMPACT (STATS)
+        ════════════════════════════════════════════ -->
+        <div class="container-fluid service py-5">
+            <div class="container py-2">
+
+                <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width:620px;">
+                    <p class="section-tag text-primary text-uppercase fw-semibold mb-1">Our Impact</p>
+                    <div class="divider-bar"></div>
+                    <h2 class="fw-bold mb-2">By The Numbers</h2>
+                    <p class="text-muted small">Our track record speaks for itself — delivering consistent, compliant, and client-focused results across the globe.</p>
+                </div>
+
+                <div class="row g-4 justify-content-center wow fadeInUp" data-wow-delay="0.2s">
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="stat-card bg-primary text-white shadow-sm">
+                            <p class="stat-label mb-2">More Than</p>
+                            <div class="stat-number">
+                                <span class="counter-value" data-toggle="counter-up">120</span>+
+                            </div>
+                            <h6 class="fw-bold text-white mt-2 mb-2">Satisfied Clients</h6>
+                            <p class="small mb-0" style="opacity:0.75; font-size:0.8rem;">
+Our experience in handling more than 120+ Clients globally, qualifies us as one of the key players in Shariah-Based Commodity Murabaha Space. Serving clients From Asia, The Middle East and Africa. We are dedicated to broadening our impact and delivering exceptional service through innovative and ethical trading practices.                                    </p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="stat-card bg-dark text-white shadow-sm">
+                            <p class="stat-label mb-2">Exeeding</p>
+                            <div class="stat-number">
+                                <span class="counter-value" data-toggle="counter-up">217</span>k+
+                            </div>
+                            <h6 class="fw-bold text-white mt-2 mb-2">Yearly Transactions</h6>
+                            <p class="small mb-0" style="opacity:0.75; font-size:0.8rem;">
+Ableace Raakin facilitates an average of 217,000 transactions annually. With a strong client base spanning over 120+ financial and non-financial institutions from Asia, the Middle East, and Africa. We are committed to delivering highly efficient and Shariah-compliant trades in the commodity murabaha market.                                    </p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="stat-card bg-primary text-white shadow-sm">
+                            <p class="stat-label mb-2">Over</p>
+                            <div class="stat-number">
+                                <span class="counter-value" data-toggle="counter-up">20</span>+
+                            </div>
+                            <h6 class="fw-bold text-white mt-2 mb-2">Years of Experience</h6>
+                            <p class="small mb-0" style="opacity:0.75; font-size:0.8rem;">
+With more than 20 years of hands-on experience in the Shariah-Based commodity sector, we are experienced in dealing with various types of financial products and from financial institutions in various regions.                                    </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Section 2 End -->
+
+<!-- ═══════════════════════════════════════════
+     SECTION — WHAT MAKES US UNIQUE
+════════════════════════════════════════════ -->
+<div class="container-fluid py-5 bg-light">
+    <div class="container">
+
+        <!-- Heading -->
+        <div class="text-center mx-auto pb-4 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width:750px;">
+
+            <p class="section-tag text-primary text-uppercase fw-semibold mb-1">
+                What Makes Us Unique
+            </p>
+
+            <div class="divider-bar"></div>
+
+            <h2 class="fw-bold mb-3">Why Choose Us</h2>
+        </div>
+
+        <!-- Content -->
+        <div class="row g-4 align-items-stretch wow fadeInUp"
+            data-wow-delay="0.2s">
+
+            <!-- Left Text Block -->
+            <div class="col-lg-6">
+                <div class="p-4 bg-white shadow-sm h-100" style="border-radius:10px;">
+
+                    <p class="text-muted mb-3">
+                        Our platform is designed with agility at its core, offering unparalleled flexibility to adapt to the unique operational requirements of each client. Whether you’re a small enterprise or a large organization, our platform ensures a seamless fit to support your specific needs.
+                    </p>
+
+                    <p class="text-muted mb-3">
+                        In addition, the commodities available on our platform are always ready and accessible, providing clients with the option to take immediate delivery whenever required. This ensures reliability and convenience, empowering our clients to act swiftly and efficiently in their transactions.
+                    </p>
+
+                    <p class="text-muted mb-3">
+                        Our award-winning platform stands as a trusted benchmark in the industry, proudly endorsed by globally recognized Shariah scholars. This endorsement reflects our unwavering commitment to delivering a solution that strictly adheres to Shariah principles, providing clients with confidence and peace of mind.
+                    </p>
+
+                    <p class="text-muted mb-0">
+                        We go beyond compliance by embedding robust safeguards to ensure the platform remains entirely free from potential Shariah breaches. With meticulous oversight and a dedication to ethical integrity, our platform empowers clients to operate within a fully Shariah-compliant environment, maintaining trust and transparency at every step.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Right Feature Cards -->
+            <div class="col-lg-6">
+
+                <div class="row g-4">
+
+                    <div class="col-md-6">
+                        <div class="value-card text-center h-100 p-4 bg-white shadow-sm" style="border-radius:10px;">
+                            <div class="icon-wrap mx-auto mb-3">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h6 class="fw-bold mb-2">Agility & Flexibility</h6>
+                            <p class="text-muted small mb-0">
+                                Designed to adapt to any business size or structure seamlessly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="value-card text-center h-100 p-4 bg-white shadow-sm" style="border-radius:10px;">
+                            <div class="icon-wrap mx-auto mb-3">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <h6 class="fw-bold mb-2">Ready Commodities</h6>
+                            <p class="text-muted small mb-0">
+                                Instant access and delivery for operational efficiency.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="value-card text-center h-100 p-4 bg-white shadow-sm" style="border-radius:10px;">
+                            <div class="icon-wrap mx-auto mb-3">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h6 class="fw-bold mb-2">Shariah Endorsed</h6>
+                            <p class="text-muted small mb-0">
+                                Recognized and endorsed by global Shariah scholars.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="value-card text-center h-100 p-4 bg-white shadow-sm" style="border-radius:10px;">
+                            <div class="icon-wrap mx-auto mb-3">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h6 class="fw-bold mb-2">Full Compliance</h6>
+                            <p class="text-muted small mb-0">
+                                Strong safeguards ensuring full Shariah compliance at all times.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Section End -->
+
+
+   <!-- ═══════════════════════════════════════════
+     SECTION 3 — ARIIMS PLATFORM (NEW LAYOUT)
+════════════════════════════════════════════ -->
+<div class="container-fluid bg-light py-3">
+    <div class="container py-1">
+
+        <div class="row align-items-center g-4 wow fadeInUp" data-wow-delay="0.1s">
+
+            <!-- Left Content -->
+            <div class="col-lg-8">
+
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fas fa-desktop text-primary me-3"
+                        style="font-size:3rem;"></i>
+
+                    <div>
+                        <h3 class="fw-bold mb-1">ARIIMS</h3>
+
+                        <p class="small mb-0 text-uppercase"
+                            style="letter-spacing:1px; opacity:0.7;">
+                            AbleAce Raakin Integrated Intelligent Management System
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-muted small mb-0">
+                    A next-generation digital platform designed to streamline,
+                    secure, and scale Commodity Murabahah operations for
+                    financial institutions worldwide.
+                </p>
+
+            </div>
+            
+
+            <!-- Right Button -->
+            <div class="col-lg-4 text-lg-end">
+                <a href="service.html"
+                    class="btn btn-primary py-1 px-4">
+                    Explore More
+                    <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+            </div>
+
+        </div>
+        
+ <!-- CTA Section Updated -->
+                <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.3s">
+                    <a href="about.html" class="btn btn-outline-primary btn-premium me-2">
+                        <i class="fas fa-arrow-left me-2"></i> Back
+                    </a>
+                    <a href="contact.html" class="btn btn-primary btn-premium">
+                        Get In Touch <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+    </div>
+</div>
+
+<!-- Section 3 End -->
+        
+
+
+
+    
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-3 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-2">
+                <div class="row g-3 align-items-center">
+                    <div class="col-md-4 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h6 class="text-white mb-2">AbleAce Raakin</h6>
+                            <p class="text-white-50 small mb-2" style="font-size: 0.8rem;">Delivering Shariah-Based Commodity Trade solutions connecting global markets with ethical, sustainable products.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 ps-md-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h6 class="text-white mb-2">Explore</h6>
+                            <div class="row g-0" style="font-size: 0.8rem;">
+                                <div class="col-6 d-flex flex-column gap-1">
+                                    <a href="index.html"><i class="fas fa-angle-right me-1"></i>Home</a>
+                                    <a href="about.html"><i class="fas fa-angle-right me-1"></i>About Us</a>
+                                    <a href="service.html"><i class="fas fa-angle-right me-1"></i>ARIIMS</a>
+                                </div>
+                                <div class="col-6 d-flex flex-column gap-1">
+                                    <a href="project.html"><i class="fas fa-angle-right me-1"></i>Commodities</a>
+                                    <a href="404.html"><i class="fas fa-angle-right me-1"></i>Governance</a>
+                                    <a href="contact.html"><i class="fas fa-angle-right me-1"></i>Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h6 class="text-white mb-2">Contact Info</h6>
+                            <div class="d-flex flex-column gap-1" style="font-size: 0.8rem;">
+                                <a href="contact.html"><i class="fa fa-map-marker-alt me-2"></i>AbleAce Raakin Sdn Bhd, Kuala Lumpur</a>
+                                <a href="contact.html"><i class="fas fa-envelope me-2"></i>service@ableace.com</a>
+                                <a href="contact.html"><i class="fas fa-phone me-2"></i>+603 2161 1164</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="text-white-50 mt-2 mb-0">
+            </div>
+        </div>
+        
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <span class="text-body" style="font-size: 0.8rem;">&copy; 2026 AbleAce Raakin. All Rights Reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end" style="font-size: 0.8rem;">
+                        Designed By <a class="border-bottom text-primary" href="https://htmlcodex.com">HTML Codex</a> &nbsp;|&nbsp;
+                        Distributed By <a class="border-bottom text-primary" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

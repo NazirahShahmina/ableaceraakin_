@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Latest News & Articles - AbleAce Raakin</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            /* --- Custom CSS for Article List & Sidebar Layout --- */
+            .article-post-card {
+                background: #ffffff;
+                border: none;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+                margin-bottom: 2rem;
+                transition: transform 0.3s ease;
+            }
+            .article-post-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            }
+            .article-img-wrapper img {
+                width: 100%;
+                height: 240px;
+                object-fit: cover;
+            }
+            @media (min-width: 768px) {
+                .article-img-wrapper img {
+                    height: 100%;
+                    min-height: 210px;
+                }
+            }
+            .article-meta {
+                font-size: 0.85rem;
+                color: #8c98a4;
+                font-weight: 500;
+            }
+            .article-meta i {
+                color: var(--bs-primary);
+            }
+            .article-title a {
+                color: #212529;
+                text-decoration: none;
+                font-weight: 700;
+                transition: color 0.2s ease;
+            }
+            .article-title a:hover {
+                color: var(--bs-primary);
+            }
+            .article-excerpt {
+                color: #6c757d;
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+            
+            /* Sidebar Styling */
+            .sidebar-widget {
+                background: #ffffff;
+                padding: 1.75rem;
+                border-radius: 12px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+                margin-bottom: 2rem;
+            }
+            .widget-title {
+                font-weight: 700;
+                position: relative;
+                padding-bottom: 10px;
+                margin-bottom: 1.25rem;
+                border-bottom: 2px solid #f1f3f5;
+            }
+            .widget-title::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 50px;
+                height: 2px;
+                background-color: var(--bs-primary);
+            }
+            .recent-post-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                border-bottom: 1px dashed #e9ecef;
+            }
+            .recent-post-item:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            .recent-post-item img {
+                width: 65px;
+                height: 65px;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+            .recent-post-title {
+                font-size: 0.9rem;
+                font-weight: 600;
+                line-height: 1.3;
+                margin-bottom: 3px;
+            }
+            .recent-post-title a {
+                color: #333;
+                text-decoration: none;
+            }
+            .recent-post-title a:hover {
+                color: var(--bs-primary);
+            }
+            .category-list a {
+                display: flex;
+                justify-content: space-between;
+                color: #495057;
+                text-decoration: none;
+                padding: 8px 0;
+                font-size: 0.95rem;
+                border-bottom: 1px solid #f1f3f5;
+            }
+            .category-list a:hover {
+                color: var(--bs-primary);
+                padding-left: 5px;
+                transition: all 0.2s ease;
+            }
+            
+            /* Custom Pagination override */
+            .pagination .page-link {
+                color: #333;
+                border: none;
+                margin: 0 3px;
+                border-radius: 6px;
+                font-weight: 600;
+            }
+            .pagination .page-item.active .page-link {
+                background-color: var(--bs-primary);
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid sticky-top px-0">
+            <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;"></div>
+            <div class="container px-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+                    <a href="index.html" class="navbar-brand p-0">
+                        <img src="assets/img/AAR.svg" alt="AbleAce Raakin Logo" class="logo-img">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About Us</a>
+                            <a href="service.html" class="nav-item nav-link">ARIIMS</a>
+                            <a href="project.html" class="nav-item nav-link">Commodities</a>
+                            <a href="404.html" class="nav-item nav-link">Governance</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Insights</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="blog.html" class="dropdown-item active">Media Exposure</a>
+                                    <a href="faqs.html" class="dropdown-item">FAQs</a>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contact Us</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="contact.html" class="dropdown-item">Contact Us</a>
+                                    <a href="careers.html" class="dropdown-item">Careers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="bg-breadcrumb-single"></div>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Latest News & Articles</h4>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="blog.html">Media Exposure</a></li>
+                    <li class="breadcrumb-item active text-primary">Articles</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- ================= MAIN LAYOUT SECTION START ================= -->
+        <div class="container-fluid py-5 bg-light">
+            <div class="container py-3">
+                <div class="row g-4">
+                    
+                    <!-- LEFT COLUMN: ARTICLE LISTING -->
+                    <div class="col-lg-8">
+                        
+                        <!-- Article 1 -->
+                        <div class="card article-post-card wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-5 article-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500&q=80" alt="Article Image">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body p-4">
+                                        <div class="article-meta mb-2">
+                                            <span class="me-3"><i class="fas fa-calendar-alt me-1"></i> May 15, 2026</span>
+                                            <span><i class="fas fa-user me-1"></i> Corporate Admin</span>
+                                        </div>
+                                        <h3 class="article-title mb-3">
+                                            <a href="article-detail.html">Expanding Ethical Shariah Trade Solutions in Global Markets</a>
+                                        </h3>
+                                        <p class="article-excerpt mb-3">AbleAce Raakin continues to bridge financial accessibility across ecosystems by scaling its high-performance commodity brokerage platform globally...</p>
+                                        <a href="article-detail.html" class="btn btn-outline-primary btn-sm">Read Full Post</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 2 -->
+                        <div class="card article-post-card wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-5 article-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="Article Image">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body p-4">
+                                        <div class="article-meta mb-2">
+                                            <span class="me-3"><i class="fas fa-calendar-alt me-1"></i> April 28, 2026</span>
+                                            <span><i class="fas fa-user me-1"></i> FinTech Desk</span>
+                                        </div>
+                                        <h3 class="article-title mb-3">
+                                            <a href="media-exposure.php">How ARIIMS 2.0 is Transforming Automated Commodity Murabaha Operations</a>
+                                        </h3>
+                                        <p class="article-excerpt mb-3">Discover the latest architectural and security updates deployed to our flagship system, streamlining trade validation times down to mere seconds...</p>
+                                        <a href="media-exposure.php" class="btn btn-outline-primary btn-sm">Read Full Post</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 3 -->
+                        <div class="card article-post-card wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-5 article-img-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=500&q=80" alt="Article Image">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body p-4">
+                                        <div class="article-meta mb-2">
+                                            <span class="me-3"><i class="fas fa-calendar-alt me-1"></i> March 12, 2026</span>
+                                            <span><i class="fas fa-user me-1"></i> Industry Report</span>
+                                        </div>
+                                        <h3 class="article-title mb-3">
+                                            <a href="islamic-sustainable-investments.html">The Growing Trajectory of Islamic Sustainable Investments in Southeast Asia</a>
+                                        </h3>
+                                        <p class="article-excerpt mb-3">An executive breakdown reviewing traceabilities in commercial crude palm oil liquidity instruments and their compliance with ethical finance constraints...</p>
+                                        <a href="islamic-sustainable-investments.html" class="btn btn-outline-primary btn-sm">Read Full Post</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pagination Navigation Base -->
+                        <nav aria-label="Page navigation" class="mt-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <ul class="pagination justify-content-start">
+                                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+
+                    <!-- RIGHT COLUMN: SIDEBAR CONTENT -->
+                    <div class="col-lg-4">
+                        
+                        <!-- Widget 1: Search -->
+                        <div class="sidebar-widget wow fadeInUp" data-wow-delay="0.1s">
+                            <h5 class="widget-title">Search Articles</h5>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Type keywords...">
+                                <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Widget 2: Categories -->
+                        <div class="sidebar-widget wow fadeInUp" data-wow-delay="0.2s">
+                            <h5 class="widget-title">Categories</h5>
+                            <div class="category-list">
+                                <a href="#">Corporate News <span>(5)</span></a>
+                                <a href="#">Shariah Frameworks <span>(3)</span></a>
+                                <a href="#">ARIIMS Updates <span>(4)</span></a>
+                                <a href="#">Market Analysis <span>(7)</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Widget 3: Recent Highlights -->
+                        <div class="sidebar-widget wow fadeInUp" data-wow-delay="0.3s">
+                            <h5 class="widget-title">Recent Posts</h5>
+                            
+                            <div class="recent-post-item">
+                                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=100&q=80" alt="thumb">
+                                <div>
+                                    <h6 class="recent-post-title"><a href="#">Expanding Ethical Shariah Trade...</a></h6>
+                                    <small class="text-muted">May 15, 2026</small>
+                                </div>
+                            </div>
+
+                            <div class="recent-post-item">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=100&q=80" alt="thumb">
+                                <div>
+                                    <h6 class="recent-post-title"><a href="#">How ARIIMS 2.0 is Transforming...</a></h6>
+                                    <small class="text-muted">April 28, 2026</small>
+                                </div>
+                            </div>
+
+                            <div class="recent-post-item">
+                                <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=100&q=80" alt="thumb">
+                                <div>
+                                    <h6 class="recent-post-title"><a href="#">Islamic Sustainable Investments...</a></h6>
+                                    <small class="text-muted">March 12, 2026</small>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- ================= MAIN LAYOUT SECTION END ================= -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-3 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-2">
+                <div class="row g-3 align-items-center">
+                    <div class="col-md-4 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h6 class="text-white mb-2">AbleAce Raakin</h6>
+                            <p class="text-white-50 small mb-2" style="font-size: 0.8rem;">Delivering Shariah-Based Commodity Trade solutions connecting global markets with ethical, sustainable products.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 ps-md-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h6 class="text-white mb-2">Explore</h6>
+                            <div class="row g-0" style="font-size: 0.8rem;">
+                                <div class="col-6 d-flex flex-column gap-1">
+                                    <a href="index.html"><i class="fas fa-angle-right me-1"></i>Home</a>
+                                    <a href="about.html"><i class="fas fa-angle-right me-1"></i>About Us</a>
+                                    <a href="service.html"><i class="fas fa-angle-right me-1"></i>ARIIMS</a>
+                                </div>
+                                <div class="col-6 d-flex flex-column gap-1">
+                                    <a href="project.html"><i class="fas fa-angle-right me-1"></i>Commodities</a>
+                                    <a href="404.html"><i class="fas fa-angle-right me-1"></i>Governance</a>
+                                    <a href="contact.html"><i class="fas fa-angle-right me-1"></i>Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h6 class="text-white mb-2">Contact Info</h6>
+                            <div class="d-flex flex-column gap-1" style="font-size: 0.8rem;">
+                                <a href="contact.html"><i class="fa fa-map-marker-alt me-2"></i>AbleAce Raakin Sdn Bhd, Kuala Lumpur</a>
+                                <a href="contact.html"><i class="fas fa-envelope me-2"></i>aaraakin@ableace.com</a>
+                                <a href="contact.html"><i class="fas fa-phone me-2"></i>+603 2161 1164</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="text-white-50 mt-2 mb-0">
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <span class="text-body" style="font-size: 0.8rem;">&copy; 2026 AbleAce Raakin. All Rights Reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end" style="font-size: 0.8rem;">
+                        Designed By <a class="border-bottom text-primary" href="https://htmlcodex.com">HTML Codex</a> &nbsp;|&nbsp;
+                        Distributed By <a class="border-bottom text-primary" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

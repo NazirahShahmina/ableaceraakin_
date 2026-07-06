@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Our Journey - AbleAce Raakin</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            .timeline {
+                position: relative;
+                padding: 0;
+                list-style: none;
+            }
+            .timeline::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: #dee2e6;
+                transform: translateX(-50%);
+            }
+            .timeline-item {
+                position: relative;
+                margin-bottom: 2rem;
+            }
+            .timeline-item:last-child {
+                margin-bottom: 0;
+            }
+            .timeline-dot {
+                position: absolute;
+                left: 50%;
+                top: 1rem;
+                width: 14px;
+                height: 14px;
+                background: var(--bs-primary, #0d6efd);
+                border-radius: 50%;
+                transform: translateX(-50%);
+                z-index: 1;
+                border: 2px solid #fff;
+                box-shadow: 0 0 0 2px var(--bs-primary, #0d6efd);
+            }
+            .timeline-content {
+                width: 44%;
+                background: #fff;
+                border-radius: 6px;
+                padding: 1rem 1.25rem;
+                box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+            }
+            .timeline-item.left .timeline-content {
+                margin-right: auto;
+                margin-left: 0;
+            }
+            .timeline-item.right .timeline-content {
+                margin-left: auto;
+                margin-right: 0;
+            }
+            .timeline-year {
+                font-size: 0.75rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            .award-badge {
+                display: inline-block;
+                background: #f8f9fa;
+                border-left: 3px solid;
+                border-radius: 4px;
+                padding: 0.4rem 0.75rem;
+                margin-bottom: 0.4rem;
+                font-size: 0.8rem;
+                width: 100%;
+            }
+            @media (max-width: 767px) {
+                .timeline::before {
+                    left: 16px;
+                }
+                .timeline-dot {
+                    left: 16px;
+                }
+                .timeline-content {
+                    width: calc(100% - 40px);
+                    margin-left: 40px !important;
+                    margin-right: 0 !important;
+                }
+            }
+
+             
+
+            /* Custom Professional Button Styles */
+            .btn-premium {
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 1px !important;
+                border-radius: 4px !important; /* Clean geometric edges */
+                padding: 0.7rem 1.75rem !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+            }
+
+            /* Primary Button Styling */
+            .btn-premium.btn-primary {
+                border: 1px solid transparent !important;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            }
+            .btn-premium.btn-primary:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
+
+            /* Outline Button Styling */
+            .btn-premium.btn-outline-primary {
+                border: 1px solid #dee2e6 !important;
+                color: #495057 !important;
+            }
+            .btn-premium.btn-outline-primary:hover {
+                background-color: var(--bs-primary) !important;
+                border-color: var(--bs-primary) !important;
+                color: #fff !important;
+                transform: translateY(-1px);
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar Start -->
+        <div class="container-fluid sticky-top px-0">
+            <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;"></div>
+            <div class="container px-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+                    <a href="index.html" class="navbar-brand p-0">
+                        <img src="assets/img/AAR.svg" alt="AbleAce Raakin Logo" class="logo-img">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="about.html" class="nav-item nav-link active">About Us</a>
+                            <a href="service.html" class="nav-item nav-link">ARIIMS</a>
+                            <a href="project.html" class="nav-item nav-link">Commodities</a>
+                            <a href="404.html" class="nav-item nav-link">Governance</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Insights</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="blog.html" class="dropdown-item">Media Exposure</a>
+                                    <a href="faqs.html" class="dropdown-item">FAQs</a>
+                                </div>
+                            </div>
+                            
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contact Us</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="contact.html" class="dropdown-item">Contact Us</a>
+                                    <a href="careers.html" class="dropdown-item">Careers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="bg-breadcrumb-single"></div>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Journey</h4>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="about.html">About Us</a></li>
+                    <li class="breadcrumb-item active text-primary">Our Journey</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Header End -->
+
+     
+
+        <!-- Journey Intro Start -->
+        <div class="container-fluid about bg-light py-5">
+            <div class="container py-2">
+                <div class="row g-5 align-items-center">
+
+<!-- Left: Image -->
+                    <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+                        <!-- Concept: Custom Pokok Kelapa Sawit Image -->
+                        <img src="assets/img/ab-1.png" class="img-fluid w-100 rounded shadow-sm" alt="Our Journey - Pokok Kelapa Sawit" style="object-fit: cover; max-height: 420px; height: 420px;">
+                    </div>
+
+
+                    <!-- Right: Intro Content -->
+                    <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
+                        <h5 class="text-primary text-uppercase fw-semibold mb-2" style="letter-spacing: 2px;">Since 2006</h5>
+                        <h2 class="fw-bold mb-3" style="line-height: 1.3;">20 Years of Shariah-Compliant Excellence</h2>
+                        <p class="text-muted mb-4">With over 20 years of experience in handling Commodity Murabahah transactions, we have established ourselves as a trusted leader in delivering Shariah-compliant solutions. Our deep understanding of Islamic finance principles and dedication to innovation enable us to provide efficient, transparent, and reliable services tailored to meet the needs of our diverse clientele.</p>
+
+                        <!-- Key Highlights -->
+                        <div class="row g-2 mb-4">
+                            <div class="col-6">
+                                <p class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Founded in Response to Malaysia's Vision</p>
+                                <p class="mb-0"><i class="fas fa-check-circle text-primary me-2"></i>First Palm Oil-Based Commodity Murabahah</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Multiple Global Award Winner</p>
+                                <p class="mb-0"><i class="fas fa-check-circle text-primary me-2"></i>Expanding to Africa, USA & Eastern Europe</p>
+                            </div>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="row g-3">
+                            <div class="col-4">
+                                <div class="bg-primary rounded p-3 text-center">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <span class="counter-value fs-3 fw-bold text-white" data-toggle="counter-up">20</span>
+                                        <span class="text-white fs-3 fw-bold">+</span>
+                                    </div>
+                                    <p class="text-white mb-0 small">Years Active</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="bg-dark rounded p-3 text-center">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <span class="counter-value fs-3 fw-bold text-white" data-toggle="counter-up">120</span>
+                                        <span class="text-white fs-3 fw-bold">+</span>
+                                    </div>
+                                    <p class="text-white mb-0 small">Clients Served</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="bg-primary rounded p-3 text-center">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <span class="text-white fs-3 fw-bold">~</span>
+                                        <span class="counter-value fs-3 fw-bold text-white" data-toggle="counter-up">217</span>
+                                        <span class="text-white fs-3 fw-bold">k+</span>
+                                    </div>
+                                    <p class="text-white mb-0 small">Yearly Transactions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Journey Intro End -->
+
+        <!-- Milestones Timeline Start -->
+        <div class="container-fluid service py-5">
+            <div class="container py-2">
+                <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <h5 class="text-primary text-uppercase fw-semibold" style="letter-spacing: 2px;">Milestones</h5>
+                    <h2 class="fw-bold">Our Story, Year by Year</h2>
+                    <p class="text-muted small">From our founding to becoming a multi-award-winning global platform, every step has been guided by purpose, principle, and innovation.</p>
+                </div>
+
+<!-- Milestones Timeline Start -->
+<div class="container-fluid service py-5">
+    <div class="container py-2">
+        <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px;">
+            <h5 class="text-primary text-uppercase fw-semibold" style="letter-spacing: 2px;">Milestones</h5>
+            <h2 class="fw-bold">Our Story, Year by Year</h2>
+            <p class="text-muted small">
+                From our founding to becoming a multi-award-winning global platform,
+                every step has been guided by purpose, principle, and innovation.
+            </p>
+        </div>
+
+        <!-- Timeline -->
+        <ul class="timeline wow fadeInUp" data-wow-delay="0.2s">
+
+            <!-- 2006 -->
+            <li class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year text-primary">2006</span>
+                    <h6 class="fw-bold mb-1 mt-1">Establishment</h6>
+                    <p class="text-muted small mb-0">
+                        Established as an answer to the Malaysian Government's call to develop
+                        the nation as a leader in the Islamic finance industry. Our inception
+                        catalysed Malaysia as an Islamic financial hub for the Commodity
+                        Murabahah market — and we were the first in Malaysia to use palm oil
+                        and its downstream products as the base asset for this programme.
+                    </p>
+                </div>
+            </li>
+
+            <!-- 2007 -->
+            <li class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year text-primary">2007</span>
+                    <h6 class="fw-bold mb-1 mt-1">First World Commodity Murabahah Trade</h6>
+                    <p class="text-muted small mb-0">
+                        Pioneered the world's first Commodity Murabahah trade using
+                        agro-based products — introducing Palm and Rubber as core assets
+                        for Shariah-compliant transactions, expanding possibilities for
+                        sustainable and ethical global trading.
+                    </p>
+                </div>
+            </li>
+
+            <!-- 2010 -->
+            <li class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year text-primary">2010</span>
+                    <h6 class="fw-bold mb-1 mt-1">Transitioning to Web-Based System</h6>
+                    <p class="text-muted small mb-0">
+                        Transitioned from manual to a fully web-based trading system,
+                        revolutionising how Commodity Murabahah transactions were conducted.
+                        This shift delivered real-time trade execution, greater transparency,
+                        and a significantly improved client experience.
+                    </p>
+                </div>
+            </li>
+
+            <!-- 2011 -->
+            <li class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year text-primary">2011</span>
+                    <h6 class="fw-bold mb-1 mt-1">First Middle East Client</h6>
+                    <p class="text-muted small mb-0">
+                        Marked our entry into one of the most prominent regions for
+                        Islamic finance by onboarding our first Middle Eastern client —
+                        solidifying our presence in the global market and demonstrating
+                        our ability to serve diverse financial institutions under
+                        Shariah-compliant principles.
+                    </p>
+                </div>
+            </li>
+
+            <!-- 2014 -->
+            <li class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year text-primary">2014</span>
+                    <h6 class="fw-bold mb-1 mt-1">World's Single Largest Sukuk Issuance</h6>
+                    <p class="text-muted small mb-0">
+                        Participated in the world's single largest Sukuk issuance — a
+                        landmark event that showcased our capability to support
+                        large-scale, Shariah-compliant financial transactions on a
+                        global stage, reinforcing our role as a trusted partner in
+                        complex Islamic finance structures.
+                    </p>
+                </div>
+            </li>
+
+            <!-- Awards -->
+            <li class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year text-primary">2016 – 2025</span>
+                    <h6 class="fw-bold mb-1 mt-1">Awards & Industry Recognition</h6>
+
+                    <p class="text-muted small mb-2">
+                        A period of sustained excellence, recognised by leading global
+                        bodies in Islamic finance and banking:
+                    </p>
+
+                    <div class="award-badge border-primary text-dark">
+                        <i class="fas fa-trophy text-primary me-2"></i>
+                        <strong>2016</strong> — Market Leadership · Global Islamic Finance Awards
+                    </div>
+
+                    <div class="award-badge border-primary text-dark">
+                        <i class="fas fa-trophy text-primary me-2"></i>
+                        <strong>2017</strong> — Best Islamic Commodity Trading Company · Global Banking and Finance Review
+                    </div>
+
+                    <div class="award-badge border-primary text-dark">
+                        <i class="fas fa-trophy text-primary me-2"></i>
+                        <strong>2017</strong> — Best Shariah Compliant Commodity Broker · Global Islamic Finance Awards
+                    </div>
+
+                    <div class="award-badge border-primary text-dark">
+                        <i class="fas fa-trophy text-primary me-2"></i>
+                        <strong>2019</strong> — Most Outstanding Islamic Commodity Platform · Kuala Lumpur Islamic Finance Forum
+                    </div>
+
+                    <div class="award-badge border-primary text-dark">
+                        <i class="fas fa-trophy text-primary me-2"></i>
+                        <strong>2020</strong> — Excellence Award Islamic Commodity Platform · Global Islamic Finance Awards
+                    </div>
+
+                    <div class="award-badge border-primary text-dark mb-0">
+                        <i class="fas fa-trophy text-primary me-2"></i>
+                        <strong>2025</strong> — Excellence Award (Shari'a Compliant Commodity Brokerage) · Global Islamic Finance Awards
+                    </div>
+                </div>
+            </li>
+
+            <!-- Today -->
+            <li class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year text-primary">Today & Beyond</span>
+                    <h6 class="fw-bold mb-1 mt-1">Global Expansion & ARIIMS Evolution</h6>
+                    <p class="text-muted small mb-0">
+                        Capitalising on our ARIIMS platform, we continue expanding our
+                        global footprint into Africa, the Middle Eastern,
+                        and parts of Eastern Europe. As our business grows, ARIIMS has
+                        continuously evolved from its initial version to the latest
+                        <strong>ARIIMS Version 3 Modules</strong>, delivering enhanced
+                        functionality, greater operational efficiency, and improved
+                        support for the evolving needs of Islamic financial institutions.
+                        We are also continuously exploring new product offerings,
+                        including soft commodities and other tangible assets, to better
+                        serve our growing global client base.
+                    </p>
+                </div>
+            </li>
+
+            <!-- Future -->
+            <li class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year text-primary">Future</span>
+                    <h6 class="fw-bold mb-1 mt-1">Continuous Innovation</h6>
+                    <p class="text-muted small mb-0">
+                        Looking ahead, we remain committed to continuously enhancing the
+                        ARIIMS platform through the development of future modules and
+                        digital innovations. Our technology roadmap focuses on improving
+                        system capabilities, operational efficiency, security, and
+                        scalability while supporting the evolving needs of Islamic finance
+                        and global commodity trading. Through continuous innovation, we
+                        aim to deliver even greater value to our clients and strengthen
+                        our position as a trusted global technology and commodity trading
+                        partner.
+                    </p>
+                </div>
+            </li>
+
+        </ul>
+        <!-- End Timeline -->
+
+    </div>
+</div>
+<!-- Milestones Timeline End -->
+             
+                <!-- CTA Section Updated -->
+                <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.3s">
+                   <a href="about.html#about-strengths" class="btn btn-outline-primary btn-premium me-2">
+    <i class="fas fa-arrow-left me-2"></i> Back
+</a>
+                    <a href="contact.html" class="btn btn-primary btn-premium">
+                        Get In Touch <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-3 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-2">
+                <div class="row g-3 align-items-center">
+                    <div class="col-md-4 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h6 class="text-white mb-2">AbleAce Raakin</h6>
+                            <p class="text-white-50 small mb-2" style="font-size: 0.8rem;">Delivering Shariah-Based Commodity Trade solutions connecting global markets with ethical, sustainable products.</p>
+                            <div class="d-flex gap-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 ps-md-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h6 class="text-white mb-2">Explore</h6>
+                            <div class="row g-0" style="font-size: 0.8rem;">
+                                <div class="col-6 d-flex flex-column gap-1">
+                                    <a href="index.html"><i class="fas fa-angle-right me-1"></i>Home</a>
+                                    <a href="about.html"><i class="fas fa-angle-right me-1"></i>About Us</a>
+                                    <a href="service.html"><i class="fas fa-angle-right me-1"></i>ARIIMS</a>
+                                </div>
+                                <div class="col-6 d-flex flex-column gap-1">
+                                    <a href="project.html"><i class="fas fa-angle-right me-1"></i>Commodities</a>
+                                    <a href="404.html"><i class="fas fa-angle-right me-1"></i>Governance</a>
+                                    <a href="contact.html"><i class="fas fa-angle-right me-1"></i>Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h6 class="text-white mb-2">Contact Info</h6>
+                            <div class="d-flex flex-column gap-1" style="font-size: 0.8rem;">
+                                <a href=""><i class="fa fa-map-marker-alt me-2"></i>AbleAce Raakin Sdn Bhd, Kuala Lumpur</a>
+                                <a href=""><i class="fas fa-envelope me-2"></i>service@ableace.com</a>
+                                <a href=""><i class="fas fa-phone me-2"></i>+603 2161 1164</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="text-white-50 mt-2 mb-0">
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <span class="text-body" style="font-size: 0.8rem;">&copy; 2026 AbleAce Raakin. All Rights Reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end" style="font-size: 0.8rem;">
+                        Designed By <a class="border-bottom text-primary" href="https://htmlcodex.com">HTML Codex</a> &nbsp;|&nbsp;
+                        Distributed By <a class="border-bottom text-primary" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

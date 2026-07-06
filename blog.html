@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Media Exposure - Ableace Raakin</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+
+            /* ===== OUR NEWS SECTION ===== */
+.news-card {
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.news-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-date {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.news-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.news-excerpt {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.news-sidebar {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.news-sidebar h5 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.news-sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.news-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.news-sidebar ul li a {
+    color: #555;
+    text-decoration: none;
+}
+
+.news-sidebar ul li a:hover {
+    color: #0d6efd;
+    
+}
+
+
+/* ===== OUR NEWS ===== */
+
+.news-card {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.news-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-date {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.news-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.news-excerpt {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+            .blog-item .project-img img {
+                height: 160px !important;
+                object-fit: cover !important;
+            }
+            .blog-item {
+                height: 100%;
+            }
+            .blog-item .my-3 {
+                margin-top: 0.75rem !important;
+                margin-bottom: 0.75rem !important;
+            }
+            .blog-item .mb-3 {
+                margin-bottom: 0.75rem !important;
+            }
+
+            /* --- Custom CSS for the 3 Media Cards --- */
+            .media-card {
+                border: none;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                height: 100%; /* Forces cards to be equal height */
+                display: flex;
+                flex-direction: column;
+            }
+            .media-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            }
+            .media-card img {
+                height: 220px;
+                object-fit: cover;
+                width: 100%;
+            }
+            .media-card-body {
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1; /* Pushes the button to the bottom if content sizes vary */
+            }
+            .media-card-title {
+                font-weight: 700;
+                color: #333;
+                margin-bottom: 1rem;
+            }
+            .media-card-text {
+                color: #6c757d;
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin-bottom: 1.5rem;
+            }
+            .media-card .btn-readmore {
+                align-self: flex-start;
+                margin-top: auto; /* Aligns buttons horizontally across all cards */
+                padding: 0.6rem 1.5rem;
+                font-weight: 600;
+                border-radius: 5px;
+            }
+
+            /* ==========================
+   MODERN NEWS SECTION
+========================== */
+
+.news-section {
+    background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+}
+
+.featured-news {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.featured-news img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.featured-content {
+    padding: 50px;
+}
+
+
+
+.news-card {
+    background: #fff;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+    transition: all .35s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+.news-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 24px;
+}
+
+.news-date {
+    display: inline-block;
+    background: #eef4ff;
+    color: #0d6efd;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+
+.news-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.news-excerpt {
+    color: #6c757d;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.news-link {
+    color: #0d6efd;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.news-link:hover {
+    letter-spacing: 0.5px;
+}
+
+.news-sidebar {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 100px;
+}
+
+.sidebar-title {
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #0d3b7a;
+}
+
+.archive-year {
+    margin-bottom: 25px;
+}
+
+.archive-year h6 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.archive-year ul {
+    list-style: none;
+    padding: 0;
+}
+
+.archive-year li {
+    margin-bottom: 10px;
+}
+
+.archive-year a {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.archive-year a:hover {
+    color: #0d6efd;
+    padding-left: 5px;
+}
+
+.news-section {
+    position: relative;
+    background: url('assets/img/tower-bg.png') center center/cover no-repeat;
+    padding: 100px 0;
+}
+
+.news-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background: rgba(10, 25, 47, 0.5);
+}
+
+.news-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Make section title white */
+.news-section h1,
+.news-section .display-5 {
+    color: #fff;
+}
+
+.news-section > .container > .text-center p {
+    color: rgba(255,255,255,0.85) !important;
+}
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid sticky-top px-0">
+            <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;"></div>
+            <div class="container px-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+                    <a href="index.html" class="navbar-brand p-0">
+                        <img src="assets/img/AAR.svg" alt="AbleAce Raakin Logo" class="logo-img">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About Us</a>
+                            <a href="service.html" class="nav-item nav-link">ARIIMS</a>
+                            <a href="project.html" class="nav-item nav-link">Commodities</a>
+                            <a href="404.html" class="nav-item nav-link">Governance</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Insights</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="blog.html" class="dropdown-item active">Media Exposure</a>
+                                    <a href="faqs.html" class="dropdown-item">FAQs</a>
+                                </div>
+                            </div>
+                            
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contact Us</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="contact.html" class="dropdown-item">Contact Us</a>
+                                    <a href="careers.html" class="dropdown-item">Careers</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="bg-breadcrumb-single"></div>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Media Exposure</h4>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active text-primary">Media Exposure</li>
+                </ol>    
+            </div>
+        </div>
+        
+        <!-- Header End -->
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+
+        
+<!-- Our News Start -->
+<div class="container-fluid py-5 news-section">
+    <div class="container py-5">
+
+        <!-- Title -->
+        <div class="text-center mx-auto mb-5" style="max-width:800px;">
+            <h1 class="display-5 fw-bold mb-3">Latest News & Updates</h1>
+            <p class="text-muted">
+                Stay updated with our latest announcements, partnerships,
+                achievements and corporate developments.
+            </p>
+        </div>
+
+        <!-- FEATURED NEWS -->
+        <div class="featured-news mb-5">
+
+            <div class="row g-0 align-items-center">
+
+                <div class="col-lg-6">
+                    <img src="img/carousel-2.jpg" alt="">
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="featured-content">
+
+                       
+
+                        <div class="news-date">
+                        </div>
+
+                        <h2 class="fw-bold mb-4">
+ This section shows our latest news, media features, and company updates.               </h2>
+
+                        <p class="text-muted mb-4">
+                            Stay updated with the latest developments, strategic initiatives,
+                    and media coverage surrounding AbleAce Raakin. We continuously
+                    expand our presence across global markets and industry sectors.
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row g-5">
+
+            <!-- NEWS GRID -->
+            <div class="col-lg-9">
+
+                <div class="row g-4">
+
+                    <!-- Card 1 -->
+                    <div class="col-md-6">
+                        <div class="news-card">
+
+                            <img src="img/news1.png">
+
+                            <div class="news-content">
+
+                                <div class="news-date">
+                                    15 July 2025
+                                </div>
+
+                                <h5 class="news-title">
+                                    Strategic Partnership Announcement
+                                </h5>
+
+                                <p class="news-excerpt">
+                                    New collaboration supports innovation
+                                    in Shariah-compliant digital commodity
+                                    trading solutions.
+                                </p>
+
+                                <a href="news-partnership.html" class="news-link">
+                                    Read More →
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6">
+                        <div class="news-card">
+
+                            <img src="img/kl.view.png">
+
+                            <div class="news-content">
+
+                                <div class="news-date">
+                                    20 September 2024
+                                </div>
+
+                                <h5 class="news-title">
+                                    Industry Recognition Award
+                                </h5>
+
+                                <p class="news-excerpt">
+                                    Recognition received for contribution
+                                    towards ethical commodity trading
+                                    solutions.
+                                </p>
+
+                                <a href="news-industry.html" class="news-link">
+                                    Read More →
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-6">
+                        <div class="news-card">
+
+                            <img src="img/carousel-1.jpg">
+
+                            <div class="news-content">
+
+                                <div class="news-date">
+                                    03 March 2024
+                                </div>
+
+                                <h5 class="news-title">
+                                    Technology Enhancement Initiative
+                                </h5>
+
+                                <p class="news-excerpt">
+                                    Continuous investment in digital
+                                    infrastructure to support future growth.
+                                </p>
+
+                                <a href="news-tech.html" class="news-link">
+                                    Read More →
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-6">
+                        <div class="news-card">
+
+                            <img src="img/gv-1.webp">
+
+                            <div class="news-content">
+
+                                <div class="news-date">
+                                    15 January 2024
+                                </div>
+
+                                <h5 class="news-title">
+                                    Sustainability & Governance Update
+                                </h5>
+
+                                <p class="news-excerpt">
+                                    Reinforcing our commitment to ethical,
+                                    transparent and sustainable business
+                                    practices.
+                                </p>
+
+                                <a href="news-sustain.html" class="news-link">
+                                    Read More →
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="col-lg-3">
+
+                <div class="news-sidebar">
+
+                    <h4 class="sidebar-title">
+                        Archives
+                    </h4>
+
+                    <div class="archive-year">
+
+                        <h6>2025</h6>
+
+                        <ul>
+                            <li><a href="news-partnership.html">July <span>(1)</span></a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="archive-year">
+
+                        <h6>2024</h6>
+
+                        <ul>
+                            <li><a href="news-sustain.html">January <span>(1)</span></a></li>
+                            <li><a href="news-tech.html">March<span>(1)</span></a></li>
+                            <li><a href="news-industry.html">September <span>(1)</span></a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- Our News End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-3 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-2">
+                <div class="row g-3 align-items-center">
+                    <div class="col-md-4 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h6 class="text-white mb-2">AbleAce Raakin</h6>
+                            <p class="text-white-50 small mb-2" style="font-size: 0.8rem;">Delivering Shariah-Based Commodity Trade solutions connecting global markets with ethical, sustainable products.</p>
+                            <div class="d-flex gap-2"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 ps-md-5">
+                        <div class="footer-item d-flex flex-column">
+                            <h6 class="text-white mb-2">Explore</h6>
+                            <div class="row g-0" style="font-size: 0.8rem;">
+                                <div class="col-6 d-flex flex-column gap-1">
+                                    <a href="index.html"><i class="fas fa-angle-right me-1"></i>Home</a>
+                                    <a href="about.html"><i class="fas fa-angle-right me-1"></i>About Us</a>
+                                    <a href="service.html"><i class="fas fa-angle-right me-1"></i>ARIIMS</a>
+                                </div>
+                                <div class="col-6 d-flex flex-column gap-1">
+                                    <a href="project.html"><i class="fas fa-angle-right me-1"></i>Commodities</a>
+                                    <a href="404.html"><i class="fas fa-angle-right me-1"></i>Governance</a>
+                                    <a href="contact.html"><i class="fas fa-angle-right me-1"></i>Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="footer-item d-flex flex-column">
+                            <h6 class="text-white mb-2">Contact Info</h6>
+                            <div class="d-flex flex-column gap-1" style="font-size: 0.8rem;">
+                                <a href="contact.html"><i class="fa fa-map-marker-alt me-2"></i>AbleAce Raakin Sdn Bhd, Kuala Lumpur</a>
+                                <a href="contact.html"><i class="fas fa-envelope me-2"></i>service@ableace.com</a>
+                                <a href="contact.html"><i class="fas fa-phone me-2"></i>+603 2161 1164</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="text-white-50 mt-2 mb-0">
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <span class="text-body" style="font-size: 0.8rem;">&copy; 2026 AbleAce Raakin. All Rights Reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end" style="font-size: 0.8rem;">
+                        Designed By <a class="border-bottom text-primary" href="https://htmlcodex.com">HTML Codex</a> &nbsp;|&nbsp;
+                        Distributed By <a class="border-bottom text-primary" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

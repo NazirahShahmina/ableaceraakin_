@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>How It Works? - Ableace Raakin</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+ <style>
+
+    /* Custom Professional Button Styles */
+            .btn-premium {
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 1px !important;
+                border-radius: 4px !important; /* Clean geometric edges */
+                padding: 0.7rem 1.75rem !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+            }
+
+            /* Primary Button Styling */
+            .btn-premium.btn-primary {
+                border: 1px solid transparent !important;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            }
+            .btn-premium.btn-primary:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
+
+            /* Outline Button Styling */
+            .btn-premium.btn-outline-primary {
+                border: 1px solid #dee2e6 !important;
+                color: #495057 !important;
+            }
+            .btn-premium.btn-outline-primary:hover {
+                background-color: var(--bs-primary) !important;
+                border-color: var(--bs-primary) !important;
+                color: #fff !important;
+                transform: translateY(-1px);
+            }
+        </style>
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid sticky-top px-0">
+            <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
+            </div>
+            <div class="container px-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+                   <!-- LOGO UPDATED HERE -->
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="assets/img/AAR.svg" alt="AbleAce Raakin Logo" class="logo-img">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+
+             <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="service.html" class="nav-item nav-link ">ARIIMS</a>
+                    <a href="project.html" class="nav-item nav-link active">Commodities</a>
+                    <a href="404.html" class="nav-item nav-link">Governance</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Insights</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="blog.html" class="dropdown-item">Media Exposure</a>
+                            <a href="faqs.html" class="dropdown-item">FAQs</a>
+                        </div>
+                    </div>
+                           
+
+                         <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contact Us</a>
+                         <div class="dropdown-menu m-0">
+                            <a href="contact.html" class="dropdown-item">Contact Us</a>
+                            <a href="careers.html" class="dropdown-item">Careers</a>
+                        </div>
+                        </div>
+                      <!-- <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                            <button class="btn btn-primary btn-md-square mx-2" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                        </div>-->
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+       
+        
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="bg-breadcrumb-single"></div>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">How It Works?</h4>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="project.html">Commodities</a></li>
+                    <li class="breadcrumb-item active text-primary">How It Works?</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+       
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+
+
+
+<!-- =========================
+     FINANCING WORKFLOW SECTION (TAWARRUQ)
+========================= -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+
+/* MAIN LAYOUT */
+.workflow-outer-wrapper {
+    max-width: 850px; /* Adjusted to fit 5 cards neatly */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ROW BASICS */
+.workflow-row-1, .workflow-row-2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.workflow-row-1 {
+    justify-content: center;
+}
+
+/* S-FLOW: Row 2 flows Right-to-Left */
+.workflow-row-2 {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding-right: 0; 
+}
+
+/* THE DOWNWARD ARROW */
+.downward-connector {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 60px; /* Aligns under Step 5 center */
+    margin: 10px 0;
+}
+
+.down-arrow-icon {
+    font-size: 18px;
+    color: #1a4da1;
+}
+
+/* CARD BASE */
+.workflow-card {
+    width: 135px;
+    min-height: 210px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.workflow-card .step-num {
+    font-weight: 800;
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.icon-circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.workflow-card p {
+    font-size: 11px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* COLORS */
+.step-1, .step-6 { border: 1.5px solid #4a90e2; } .step-1 .step-num, .step-6 .step-num { color: #4a90e2; } .step-1 .icon-circle, .step-6 .icon-circle { background: #eef5ff; color: #1a4da1; }
+.step-2, .step-7 { border: 1.5px solid #7ed321; } .step-2 .step-num, .step-7 .step-num { color: #7ed321; } .step-2 .icon-circle, .step-7 .icon-circle { background: #f2faf0; color: #7ed321; }
+.step-3, .step-8 { border: 1.5px solid #9013fe; } .step-3 .step-num, .step-8 .step-num { color: #9013fe; } .step-3 .icon-circle, .step-8 .icon-circle { background: #f6edff; color: #9013fe; }
+.step-4, .step-9 { border: 1.5px solid #50e3c2; } .step-4 .step-num, .step-9 .step-num { color: #50e3c2; } .step-4 .icon-circle, .step-9 .icon-circle { background: #eafff9; color: #00a896; }
+.step-5 { border: 1.5px solid #f5a623; } .step-5 .step-num { color: #f5a623; } .step-5 .icon-circle { background: #fff8ee; color: #f5a623; }
+
+/* HORIZONTAL ARROWS */
+.arrow { font-size: 18px; color: #1a4da1; }
+.rev-arrow { transform: scaleX(-1); }
+
+.workflow-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 850px) {
+    .workflow-row-1, .workflow-row-2 { flex-wrap: wrap; justify-content: center; flex-direction: row; }
+    .arrow, .downward-connector { display: none; }
+}
+</style>
+
+<section class="workflow-section">
+    <!-- HEADER -->
+    
+
+
+       <!-- HEADER OUTSIDE -->
+        <div class="text-center mx-auto mb-5 py-5 wow fadeInUp"
+            data-wow-delay="0.2s"
+            style="max-width:750px;">
+
+            <p class="text-primary text-uppercase fw-semibold mb-2"
+                style="letter-spacing:2px;">
+                Advanced Trading Technology
+            </p>
+
+            <div class="mx-auto mb-3"
+                style="width:80px; height:4px; background:#0d6efd; border-radius:10px;">
+            </div>
+
+            <h2 class="fw-bold mb-3">
+               Murabahah Transaction Workflow
+            </h2>
+
+            <p class="text-muted">
+                ARIIMS is our latest trading platform version, developed
+                with advanced protection protocols and modern infrastructure
+                to ensure secure, efficient, and seamless digital trading operations.
+            </p>
+        </div>
+
+    <div class="workflow-outer-wrapper">
+        
+        <div class="workflow-row-1">
+            <div class="workflow-card step-1">
+                <div class="step-num">Step 1</div>
+                <div class="icon-circle"><i class="fas fa-university"></i></div>
+                <p>Bank initiates purchase request</p>
+            </div>
+            <div class="arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+
+            <div class="workflow-card step-2">
+                <div class="step-num">Step 2</div>
+                <div class="icon-circle"><i class="fas fa-headset"></i></div>
+                <p>AAR responds</p>
+            </div>
+            <div class="arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+
+            <div class="workflow-card step-3">
+                <div class="step-num">Step 3</div>
+                <div class="icon-circle"><i class="fas fa-file-signature"></i></div>
+                <p>Bank accepts the offer</p>
+            </div>
+            <div class="arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+
+            <div class="workflow-card step-4">
+                <div class="step-num"></div>
+                <div class="icon-circle"><i class="fas fa-users-cog"></i></div>
+                <p>Bank completes Murabahah transaction</p>
+            </div>
+            <div class="arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+
+            <div class="workflow-card step-5">
+                <div class="step-num">Step 4</div>
+                <div class="icon-circle"><i class="fas fa-file-alt"></i></div>
+                <p>Issuance of Purchase documents</p>
+            </div>
+        </div>
+
+        <div class="downward-connector">
+            <div class="down-arrow-icon"><i class="fas fa-long-arrow-alt-down"></i></div>
+        </div>
+
+        <div class="workflow-row-2">
+            <div class="workflow-card step-6">
+                <div class="step-num">Step 5</div>
+                <div class="icon-circle"><i class="fas fa-cube"></i></div>
+                <p>Bank/Customer offers Commodities</p>
+            </div>
+            <div class="arrow rev-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+
+            <div class="workflow-card step-7">
+                <div class="step-num">Step 6</div>
+                <div class="icon-circle"><i class="fas fa-handshake"></i></div>
+                <p>Buyer accepts the offer</p>
+            </div>
+            <div class="arrow rev-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+
+            <div class="workflow-card step-8">
+                <div class="step-num">Step 7</div>
+                <div class="icon-circle"><i class="fas fa-folder"></i></div>
+                <p>Issuance of documents</p>
+            </div>
+            <div class="arrow rev-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+
+            <div class="workflow-card step-9">
+                <div class="step-num"></div>
+                <div class="icon-circle"><i class="fas fa-check-circle"></i></div>
+                <p>Customer completes Murabahah transaction</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="workflow-footer">
+        <i class="fas fa-shield-alt" style="color:#1a4da1"></i>
+        <span>AbleAce Raakin ensures Shariah compliance and transparency at every step.</span>
+    </div>
+</section>
+ <!-- ═══════════════════════════════════════════
+             SECTION 5 — CTA STRIP
+        ════════════════════════════════════════════ -->
+        <div class="container-fluid bg-light py-5">
+            <div class="container py-2">
+                <div class="row align-items-center g-4 wow fadeInUp" data-wow-delay="0.1s">
+
+                    <div class="col-lg-8">
+                        <p class="section-tag text-primary text-uppercase fw-semibold mb-1">Let's Connect</p>
+                        <h2 class="fw-bold mb-2">Ready to Transform Your Trading Operations?</h2>
+                        <p class="text-muted small mb-0">Whether you are a financial institution seeking a reliable Shariah-compliant commodity trading solution or a partner looking to collaborate, we are here to help you take the next step.</p>
+                    </div>
+
+                    <div class="col-lg-4 text-lg-end d-flex flex-wrap gap-2 justify-content-lg-end">
+                        <a href="contact.html" class="btn btn-primary py-1 px-4">
+                            Get In Touch <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                       
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Section 5 End -->
+
+       <!-- Back Navigation -->
+<div class="container-fluid bg-light border-bottom py-2">
+    <div class="container">
+        <a href="project.html#commodity-murabahah" class="btn btn-outline-primary btn-premium py-2 px-3">
+            <i class="fas fa-arrow-left me-2"></i> Back
+        </a>
+    </div>
+</div>
+<!-- Back Navigation End -->
+
+  <!-- Footer Start -->
+<div class="container-fluid footer py-3 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container py-2">
+        <div class="row g-3 align-items-center">
+            <div class="col-md-4 col-lg-4">
+                <div class="footer-item d-flex flex-column">
+                    <h6 class="text-white mb-2">AbleAce Raakin</h6>
+                    <p class="text-white-50 small mb-2" style="font-size: 0.8rem;">Delivering Shariah-Based Commodity Trade solutions connecting global markets with ethical, sustainable products.</p>
+                    <p class="text-white-50 small mb-2" style="font-size: 0.8rem;">Pioneer in Syariah – Based Commodity Murabahah Platform in Malaysia.</p>
+                    <div class="d-flex gap-2">
+
+                    </div>
+                </div>
+            </div>
+         <div class="col-md-4 col-lg-4 ps-md-5">
+    <div class="footer-item d-flex flex-column">
+        <h6 class="text-white mb-2">Explore</h6>
+        <div class="row g-0" style="font-size: 0.8rem;">
+            <div class="col-6 d-flex flex-column gap-1">
+                <a href="index.html"><i class="fas fa-angle-right me-1"></i>Home</a>
+                <a href="about.html"><i class="fas fa-angle-right me-1"></i>About Us</a>
+                <a href="service.html"><i class="fas fa-angle-right me-1"></i>ARIIMS</a>
+            </div>
+            <div class="col-6 d-flex flex-column gap-1">
+                <a href="project.html"><i class="fas fa-angle-right me-1"></i>Commodities</a>
+                <a href="404.html"><i class="fas fa-angle-right me-1"></i>Governance</a>
+                <a href="contact.html"><i class="fas fa-angle-right me-1"></i>Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="col-md-4 col-lg-4">
+                <div class="footer-item d-flex flex-column">
+                    <h6 class="text-white mb-2">Contact Info</h6>
+                    <div class="d-flex flex-column gap-1" style="font-size: 0.8rem;">
+                        <a href="contact.html"><i class="fa fa-map-marker-alt me-2"></i>AbleAce Raakin Sdn Bhd, Kuala Lumpur</a>
+                        <a href="contact.html"><i class="fas fa-envelope me-2"></i>service@ableace.com</a>
+                        <a href="contact.html"><i class="fas fa-phone me-2"></i>+603 2161 1164</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="text-white-50 mt-2 mb-0">
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- Copyright Start -->
+<div class="container-fluid copyright py-2">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <span class="text-body" style="font-size: 0.8rem;">&copy; 2026 AbleAce Raakin. All Rights Reserved.</span>
+            </div>
+            <div class="col-md-6 text-center text-md-end" style="font-size: 0.8rem;">
+                Designed By <a class="border-bottom text-primary" href="https://htmlcodex.com">HTML Codex</a> &nbsp;|&nbsp;
+                Distributed By <a class="border-bottom text-primary" href="https://themewagon.com">ThemeWagon</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+ <!--  <script type="importmap">
+{
+  "imports": {
+    "@google/generative-ai": "https://esm.run/@google/generative-ai"
+  }
+}
+</script>
+
+
+Template Javascript 
+    <script src="js/main.js"></script>-->
+   <!-- <script type="module" src="js/main.js"></script>-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

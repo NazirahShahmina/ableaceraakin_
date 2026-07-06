@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Add News - AbleAce Raakin CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            background: #f5f7fa;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 260px;
+            height: 100vh;
+            background: #1f2937;
+            color: white;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            padding: 25px;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+        }
+
+        .sidebar-header img {
+            max-width: 170px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 14px 25px;
+            color: #d1d5db;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: #374151;
+            color: white;
+        }
+
+        .main-content {
+            margin-left: 260px;
+            padding: 30px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 15px rgba(0,0,0,.05);
+        }
+
+        .topbar {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 15px rgba(0,0,0,.05);
+        }
+
+        textarea {
+            min-height: 300px;
+        }
+
+        @media(max-width:991px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <img src="assets/img/AAR.svg" alt="">
+        </div>
+
+        <a href="admin-dashboard.html">
+            <i class="fas fa-chart-line me-2"></i>
+            Dashboard
+        </a>
+
+        <a href="admin-news.html">
+            <i class="fas fa-newspaper me-2"></i>
+            News Management
+        </a>
+
+        <a href="add-news.html" class="active">
+            <i class="fas fa-plus-circle me-2"></i>
+            Add News
+        </a>
+
+        <a href="admin-login.html">
+            <i class="fas fa-sign-out-alt me-2"></i>
+            Logout
+        </a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <div class="topbar">
+            <h3 class="mb-0">Add New Article</h3>
+        </div>
+
+        <div class="content-card">
+
+            <form>
+
+                <!-- Title -->
+                <div class="mb-4">
+                    <label class="form-label">
+                        News Title
+                    </label>
+
+                    <input type="text"
+                        class="form-control"
+                        placeholder="Enter article title">
+                </div>
+
+                <!-- Date -->
+                <div class="mb-4">
+                    <label class="form-label">
+                        Publish Date
+                    </label>
+
+                    <input type="date"
+                        class="form-control">
+                </div>
+
+                <!-- Featured Image -->
+                <div class="mb-4">
+                    <label class="form-label">
+                        Featured Image
+                    </label>
+
+                    <input type="file"
+                        class="form-control">
+                </div>
+
+                <!-- Short Description -->
+                <div class="mb-4">
+                    <label class="form-label">
+                        Short Description
+                    </label>
+
+                    <textarea class="form-control"
+                        rows="4"
+                        placeholder="Short summary shown on blog page"></textarea>
+                </div>
+
+                <!-- Full Article -->
+                <div class="mb-4">
+                    <label class="form-label">
+                        Full Article Content
+                    </label>
+
+                    <textarea class="form-control"
+                        placeholder="Write full news article here..."></textarea>
+                </div>
+
+                <!-- SEO -->
+                <div class="mb-4">
+                    <label class="form-label">
+                        SEO URL Slug
+                    </label>
+
+                    <input type="text"
+                        class="form-control"
+                        placeholder="ableace-raakin-expands-presence">
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex gap-3">
+
+                    <button type="button"
+                        class="btn btn-secondary">
+                        Save Draft
+                    </button>
+
+                    <button type="submit"
+                        class="btn btn-primary">
+                        Publish Article
+                    </button>
+
+                    <a href="admin-news.html"
+                        class="btn btn-outline-dark">
+                        Cancel
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Admin Dashboard - AbleAce Raakin CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            background: #f5f7fa;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 260px;
+            height: 100vh;
+            background: #1f2937;
+            color: #fff;
+            z-index: 1000;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            padding: 25px 15px;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+        }
+
+        .sidebar-header img {
+            max-width: 170px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .sidebar-menu {
+            padding-top: 20px;
+        }
+
+        .sidebar-menu a {
+            display: block;
+            color: #d1d5db;
+            text-decoration: none;
+            padding: 14px 25px;
+            transition: all 0.3s;
+        }
+
+        .sidebar-menu a:hover,
+        .sidebar-menu a.active {
+            background: #374151;
+            color: #fff;
+        }
+
+        .sidebar-menu i {
+            width: 25px;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 260px;
+            padding: 30px;
+        }
+
+        .topbar {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 15px rgba(0,0,0,.05);
+        }
+
+        .topbar h3 {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        /* Statistic Cards */
+        .stat-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 15px rgba(0,0,0,.05);
+            transition: .3s;
+            height: 100%;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card i {
+            font-size: 28px;
+            color: #0d6efd;
+            margin-bottom: 10px;
+        }
+
+        .stat-card h2 {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            margin: 0;
+            color: #6c757d;
+        }
+
+        /* Content Card */
+        .content-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 15px rgba(0,0,0,.05);
+        }
+
+        /* Badge */
+        .status-published {
+            background: #198754;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .status-draft {
+            background: #ffc107;
+            color: #000;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .table th {
+            font-weight: 600;
+        }
+
+        .quick-btn {
+            min-width: 180px;
+        }
+
+        @media(max-width: 991px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <img src="assets/img/AAR.svg" alt="AbleAce Raakin">
+        </div>
+
+        <div class="sidebar-menu">
+
+            <a href="#" class="active">
+                <i class="fas fa-chart-line"></i>
+                Dashboard
+            </a>
+
+            <a href="admin-news.html">
+                <i class="fas fa-newspaper"></i>
+                News Management
+            </a>
+
+            <a href="add-news.html">
+                <i class="fas fa-plus-circle"></i>
+                Add News
+            </a>
+
+            <a href="#">
+                <i class="fas fa-folder-open"></i>
+                Archives
+            </a>
+
+            <a href="#">
+                <i class="fas fa-users"></i>
+                Users
+            </a>
+
+            <a href="#">
+                <i class="fas fa-cog"></i>
+                Settings
+            </a>
+
+            <a href="admin-login.html">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Topbar -->
+        <div class="topbar d-flex justify-content-between align-items-center">
+            <h3>Dashboard</h3>
+
+            <div>
+                Welcome, <strong>Admin</strong>
+            </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="row g-4 mb-4">
+
+            <div class="col-md-6 col-xl-3">
+                <div class="stat-card">
+                    <i class="fas fa-newspaper"></i>
+                    <h2>15</h2>
+                    <p>Total Articles</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="stat-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>12</h2>
+                    <p>Published</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="stat-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h2>3</h2>
+                    <p>Draft Articles</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <div class="stat-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h2>4</h2>
+                    <p>This Month</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="content-card mb-4">
+
+            <div class="d-flex flex-wrap gap-3">
+
+                <a href="add-news.html" class="btn btn-primary quick-btn">
+                    <i class="fas fa-plus me-2"></i>
+                    Add New Article
+                </a>
+
+                <a href="blog.html" class="btn btn-outline-primary quick-btn">
+                    <i class="fas fa-eye me-2"></i>
+                    View Website
+                </a>
+
+                <a href="admin-news.html" class="btn btn-outline-dark quick-btn">
+                    <i class="fas fa-newspaper me-2"></i>
+                    Manage Articles
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Recent Articles -->
+        <div class="content-card">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h5 class="mb-0">Recent Articles</h5>
+
+                <a href="admin-news.html" class="btn btn-sm btn-primary">
+                    View All
+                </a>
+            </div>
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle">
+
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th width="180">Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>AbleAce Raakin Expands Presence into New Markets</td>
+                            <td>08 Oct 2025</td>
+                            <td>
+                                <span class="status-published">
+                                    Published
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning btn-sm">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-danger btn-sm">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Strategic Partnership Announcement</td>
+                            <td>15 Jul 2025</td>
+                            <td>
+                                <span class="status-published">
+                                    Published
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning btn-sm">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-danger btn-sm">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Industry Recognition Award</td>
+                            <td>20 Sep 2024</td>
+                            <td>
+                                <span class="status-draft">
+                                    Draft
+                                </span>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning btn-sm">
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-danger btn-sm">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

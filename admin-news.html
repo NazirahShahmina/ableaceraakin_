@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>News Management - AbleAce Raakin CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        body{
+            background:#f5f7fa;
+            overflow-x:hidden;
+            font-family:'Segoe UI',sans-serif;
+        }
+
+        .sidebar{
+            position:fixed;
+            top:0;
+            left:0;
+            width:260px;
+            height:100vh;
+            background:#1f2937;
+            color:white;
+        }
+
+        .sidebar-header{
+            text-align:center;
+            padding:25px;
+            border-bottom:1px solid rgba(255,255,255,.1);
+        }
+
+        .sidebar-header img{
+            max-width:170px;
+            background:white;
+            padding:10px;
+            border-radius:8px;
+        }
+
+        .sidebar a{
+            display:block;
+            padding:14px 25px;
+            color:#d1d5db;
+            text-decoration:none;
+            transition:.3s;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active{
+            background:#374151;
+            color:white;
+        }
+
+        .main-content{
+            margin-left:260px;
+            padding:30px;
+        }
+
+        .page-card{
+            background:white;
+            border-radius:12px;
+            padding:25px;
+            box-shadow:0 2px 15px rgba(0,0,0,.05);
+        }
+
+        .status-published{
+            background:#198754;
+            color:white;
+            padding:5px 12px;
+            border-radius:20px;
+            font-size:12px;
+        }
+
+        .status-draft{
+            background:#ffc107;
+            color:black;
+            padding:5px 12px;
+            border-radius:20px;
+            font-size:12px;
+        }
+
+        .topbar{
+            background:white;
+            border-radius:12px;
+            padding:20px;
+            margin-bottom:25px;
+            box-shadow:0 2px 15px rgba(0,0,0,.05);
+        }
+
+        @media(max-width:991px){
+            .sidebar{
+                position:relative;
+                width:100%;
+                height:auto;
+            }
+
+            .main-content{
+                margin-left:0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+    <div class="sidebar-header">
+        <img src="assets/img/AAR.svg" alt="">
+    </div>
+
+    <a href="admin-dashboard.html">
+        <i class="fas fa-chart-line me-2"></i>
+        Dashboard
+    </a>
+
+    <a href="admin-news.html" class="active">
+        <i class="fas fa-newspaper me-2"></i>
+        News Management
+    </a>
+
+    <a href="add-news.html">
+        <i class="fas fa-plus-circle me-2"></i>
+        Add News
+    </a>
+
+    <a href="#">
+        <i class="fas fa-folder-open me-2"></i>
+        Archives
+    </a>
+
+    <a href="#">
+        <i class="fas fa-cog me-2"></i>
+        Settings
+    </a>
+
+    <a href="admin-login.html">
+        <i class="fas fa-sign-out-alt me-2"></i>
+        Logout
+    </a>
+
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+
+    <!-- Top Bar -->
+    <div class="topbar d-flex justify-content-between align-items-center">
+
+        <h3 class="mb-0">
+            News Management
+        </h3>
+
+        <a href="add-news.html"
+           class="btn btn-primary">
+
+            <i class="fas fa-plus me-2"></i>
+            Add News
+
+        </a>
+
+    </div>
+
+    <!-- Content Card -->
+    <div class="page-card">
+
+        <!-- Search & Filter -->
+        <div class="row g-3 mb-4">
+
+            <div class="col-md-4">
+                <input type="text"
+                       class="form-control"
+                       placeholder="Search article...">
+            </div>
+
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option>All Years</option>
+                    <option>2026</option>
+                    <option>2025</option>
+                    <option>2024</option>
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option>All Status</option>
+                    <option>Published</option>
+                    <option>Draft</option>
+                </select>
+            </div>
+
+        </div>
+
+        <!-- News Table -->
+        <div class="table-responsive">
+
+            <table class="table table-hover align-middle">
+
+                <thead>
+                    <tr>
+                        <th width="90">Image</th>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th width="250">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            <img src="assets/img/news1.jpg"
+                                 width="70"
+                                 class="rounded">
+                        </td>
+
+                        <td>
+                            AbleAce Raakin Expands Presence into New Markets
+                        </td>
+
+                        <td>
+                            08 Oct 2025
+                        </td>
+
+                        <td>
+                            <span class="status-published">
+                                Published
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn btn-info btn-sm">
+                                View
+                            </button>
+
+                            <button class="btn btn-warning btn-sm">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-danger btn-sm">
+                                Delete
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <img src="assets/img/news2.jpg"
+                                 width="70"
+                                 class="rounded">
+                        </td>
+
+                        <td>
+                            Strategic Partnership Announcement
+                        </td>
+
+                        <td>
+                            15 Jul 2025
+                        </td>
+
+                        <td>
+                            <span class="status-published">
+                                Published
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn btn-info btn-sm">
+                                View
+                            </button>
+
+                            <button class="btn btn-warning btn-sm">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-danger btn-sm">
+                                Delete
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <img src="assets/img/news3.jpg"
+                                 width="70"
+                                 class="rounded">
+                        </td>
+
+                        <td>
+                            Industry Recognition Award
+                        </td>
+
+                        <td>
+                            20 Sep 2024
+                        </td>
+
+                        <td>
+                            <span class="status-draft">
+                                Draft
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn btn-info btn-sm">
+                                View
+                            </button>
+
+                            <button class="btn btn-warning btn-sm">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-danger btn-sm">
+                                Delete
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Pagination -->
+        <nav class="mt-4">
+
+            <ul class="pagination justify-content-end">
+
+                <li class="page-item disabled">
+                    <a class="page-link">
+                        Previous
+                    </a>
+                </li>
+
+                <li class="page-item active">
+                    <a class="page-link">
+                        1
+                    </a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link">
+                        2
+                    </a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link">
+                        Next
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</div>
+
+</body>
+</html>

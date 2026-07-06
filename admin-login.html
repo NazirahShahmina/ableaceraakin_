@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Admin Login - AbleAce Raakin</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            background: #f5f7fa;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 450px;
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .login-logo {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .login-logo img {
+            max-width: 180px;
+        }
+
+        .login-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-title h3 {
+            font-weight: 700;
+            color: #222;
+        }
+
+        .form-control {
+            height: 50px;
+        }
+
+        .btn-login {
+            height: 50px;
+            width: 100%;
+            font-weight: 600;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .input-group-text {
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-card">
+
+        <!-- Logo -->
+        <div class="login-logo">
+            <img src="assets/img/AAR.svg" alt="AbleAce Raakin">
+        </div>
+
+        <!-- Title -->
+        <div class="login-title">
+            <h3>Admin Portal</h3>
+            <p class="text-muted mb-0">
+                Sign in to manage Media Exposure content
+            </p>
+        </div>
+
+        <!-- Login Form -->
+        <form action="#" method="POST">
+
+            <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <input type="email"
+                           class="form-control"
+                           placeholder="Enter email"
+                           required>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label">Password</label>
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <input type="password"
+                           class="form-control"
+                           placeholder="Enter password"
+                           required>
+                </div>
+            </div>
+
+            <button type="submit"
+                    class="btn btn-primary btn-login">
+                Login
+            </button>
+
+        </form>
+
+        <div class="footer-text">
+            © 2026 AbleAce Raakin CMS
+        </div>
+
+    </div>
+
+</body>
+
+</html>

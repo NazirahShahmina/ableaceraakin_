@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Awards & Accreditations - AbleAce Raakin</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+
+            /* --- Uniform Certificate Frame Styles --- */
+.cert-frame-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    /* This creates a fixed 4:3 landscape frame ratio regardless of original image size */
+    padding-top: 75%; 
+    background-color: #f8f9fa; /* Light gray padding background for long certificates */
+    overflow: hidden;
+    border-bottom: 1px solid #dee2e6;
+    cursor: pointer;
+}
+
+.cert-frame-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* change 'contain' to 'cover' if you want images to fill out the box entirely */
+    object-fit: contain; 
+    padding: 10px; /* Gives nice spacing inside the frame */
+    transition: transform 0.3s ease;
+}
+
+/* Hover Zoom Effect */
+.cert-frame-wrapper:hover .cert-frame-img {
+    transform: scale(1.05);
+}
+
+/* Elegant Pop-up Overlay Cue */
+.cert-frame-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 110, 253, 0.4); /* Blue accent tint on hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cert-frame-wrapper:hover .cert-frame-overlay {
+    opacity: 1;
+}
+
+/* Keeps card footers aligned if description texts vary in length */
+.award-card .mt-auto {
+    margin-top: auto;
+}
+            /* Affiliation logo placeholder */
+            .logo-placeholder {
+                width: 100%;
+                height: 90px;
+                background: #f1f3f5;
+                border: 2px dashed #ced4da;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #adb5bd;
+                font-size: 0.78rem;
+                text-align: center;
+                padding: 0.5rem;
+            }
+            .logo-placeholder img {
+                max-width: 100%;
+                max-height: 70px;
+                object-fit: contain;
+            }
+
+            /* Award organiser logo strip */
+            .org-logo-placeholder {
+                width: 130px;
+                height: 60px;
+                background: #f1f3f5;
+                border: 2px dashed #ced4da;
+                border-radius: 6px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #adb5bd;
+                font-size: 0.72rem;
+                text-align: center;
+                padding: 0.25rem;
+                flex-shrink: 0;
+            }
+            .org-logo-placeholder img {
+                max-width: 100%;
+                max-height: 50px;
+                object-fit: contain;
+            }
+
+            /* Award card */
+            .award-card {
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+                overflow: hidden;
+                height: 100%;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+            .award-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.11);
+            }
+
+            /* Certificate image placeholder inside award card */
+            .cert-placeholder {
+                width: 100%;
+                height: 180px;
+                background: #f8f9fa;
+                border-bottom: 2px dashed #dee2e6;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #adb5bd;
+                font-size: 0.78rem;
+                text-align: center;
+                gap: 0.4rem;
+            }
+            .cert-placeholder img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            /* Year badge */
+            .year-badge {
+                display: inline-block;
+                background: #e9f0ff;
+                color: #0d6efd;
+                font-size: 0.72rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                border-radius: 20px;
+                padding: 0.2rem 0.65rem;
+                margin-bottom: 0.5rem;
+            }
+
+            /* Section tab indicator */
+            .section-tab {
+                display: inline-block;
+                padding: 0.35rem 1.25rem;
+                border-radius: 20px;
+                font-weight: 600;
+                font-size: 0.85rem;
+                cursor: default;
+            }
+
+           
+            /* Custom Professional Button Styles */
+            .btn-premium {
+                font-size: 0.85rem !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 1px !important;
+                border-radius: 4px !important; /* Clean geometric edges */
+                padding: 0.7rem 1.75rem !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+            }
+   
+            /* Primary Button Styling */
+            .btn-premium.btn-primary {
+                border: 1px solid transparent !important;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            }
+            .btn-premium.btn-primary:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
+
+            /* Outline Button Styling */
+            .btn-premium.btn-outline-primary {
+                border: 1px solid #dee2e6 !important;
+                color: #495057 !important;
+            }
+            .btn-premium.btn-outline-primary:hover {
+                background-color: var(--bs-primary) !important;
+                border-color: var(--bs-primary) !important;
+                color: #fff !important;
+                transform: translateY(-1px);
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar Start -->
+        <div class="container-fluid sticky-top px-0">
+            <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;"></div>
+            <div class="container px-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+                    <a href="index.html" class="navbar-brand p-0">
+                        <img src="assets/img/AAR.svg" alt="AbleAce Raakin Logo" class="logo-img">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="about.html" class="nav-item nav-link active">About Us</a>
+                            <a href="service.html" class="nav-item nav-link">ARIIMS</a>
+                            <a href="project.html" class="nav-item nav-link">Commodities</a>
+                            <a href="404.html" class="nav-item nav-link">Governance</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Insights</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="blog.html" class="dropdown-item">Media Exposure</a>
+                                    <a href="faqs.html" class="dropdown-item">FAQs</a>
+                                </div>
+                            </div>
+                             <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Contact Us</a>
+                         <div class="dropdown-menu m-0">
+                            <a href="contact.html" class="dropdown-item">Contact Us</a>
+                            <a href="careers.html" class="dropdown-item">Careers</a>
+                        </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="bg-breadcrumb-single"></div>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Awards & Accreditations</h4>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="about.html">About Us</a></li>
+                    <li class="breadcrumb-item active text-primary">Our Awards</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Header End -->
+
+       
+
+        <!-- Intro Start -->
+        <div class="container-fluid about bg-light py-5">
+            <div class="container py-2">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="text-primary text-uppercase fw-semibold mb-2" style="letter-spacing: 2px;">Recognition</h5>
+                        <h2 class="fw-bold mb-3">Awards & Accreditations</h2>
+                        <p class="text-muted">Throughout the years, we are committed to providing the best services to our clients. We are very proud of our work and our numerous accomplishments. These awards and accolades are a strong testament to our continuous pursuit of excellence at AbleAce Raakin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Intro End -->
+
+       <!-- Affiliations Start -->
+<div class="container-fluid service py-5">
+    <div class="container py-2">
+
+        <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 650px;">
+            <h5 class="text-primary text-uppercase fw-semibold" style="letter-spacing: 2px;">Our Network</h5>
+            <h2 class="fw-bold">Affiliations</h2>
+            <p class="text-muted small">
+                We are proudly affiliated with leading organizations in the Islamic finance and commodities industry.
+            </p>
+        </div>
+
+        <div class="row g-4 justify-content-center wow fadeInUp" data-wow-delay="0.2s">
+
+            <!-- Affiliation Logo 1 -->
+            <div class="col-6 col-md-3">
+                <div class="bg-white rounded p-3 text-center shadow-sm h-100 d-flex align-items-center justify-content-center">
+                    <img src="img/aff1.jpg" alt="Affiliation 1" class="img-fluid" style="max-height: 80px; object-fit: contain;">
+                </div>
+            </div>
+
+            <!-- Affiliation Logo 2 -->
+            <div class="col-6 col-md-3">
+                <div class="bg-white rounded p-3 text-center shadow-sm h-100 d-flex align-items-center justify-content-center">
+                    <img src="img/aff2.png" alt="Affiliation 2" class="img-fluid" style="max-height: 80px; object-fit: contain;">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Affiliations End -->
+    <!-- Award Organiser Logos Start -->
+<div class="container-fluid about bg-light py-4">
+    <div class="container py-2">
+
+        <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 650px;">
+            <h5 class="text-primary text-uppercase fw-semibold" style="letter-spacing: 2px;">Presented By</h5>
+            <h2 class="fw-bold">Awarding Bodies</h2>
+            <p class="text-muted small">
+                Our awards have been conferred by these globally recognised institutions in Islamic finance and banking.
+            </p>
+        </div>
+
+        <div class="row g-4 justify-content-center align-items-center wow fadeInUp" data-wow-delay="0.2s">
+
+            <!-- GIFA Logo -->
+            <div class="col-6 col-md-4 text-center">
+                <div class="bg-white rounded p-3 shadow-sm d-flex align-items-center justify-content-center logo-box">
+                    <img src="img/GIFA.png" alt="Global Islamic Finance Awards" class="org-logo">
+                </div>
+            </div>
+
+            <!-- GBFR Logo -->
+            <div class="col-6 col-md-4 text-center">
+                <div class="bg-white rounded p-3 shadow-sm d-flex align-items-center justify-content-center logo-box">
+                    <img src="img/GB.png" alt="Global Banking and Finance Review" class="org-logo">
+                </div>
+            </div>
+
+            <!-- KLIFF Logo -->
+            <div class="col-6 col-md-4 text-center">
+                <div class="bg-white rounded p-3 shadow-sm d-flex align-items-center justify-content-center logo-box">
+                    <img src="img/KLIFF.png" alt="Kuala Lumpur Islamic Finance Forum" class="org-logo">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Award Organiser Logos End -->
+
+   <!-- Awards List Start -->
+<!-- Awards List Start -->
+<div class="container-fluid service py-5">
+    <div class="container py-2">
+
+        <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 650px;">
+            <h5 class="text-primary text-uppercase fw-semibold" style="letter-spacing: 2px;">Our Achievements</h5>
+            <h2 class="fw-bold">List of Awards</h2>
+            <p class="text-muted small">
+                A record of the industry recognition we have earned in our pursuit of excellence.
+            </p>
+        </div>
+
+        <div class="row g-4 wow fadeInUp" data-wow-delay="0.2s">
+
+            <!-- Award 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="award-card d-flex flex-column h-100">
+                    <!-- Uniform Clickable Frame Container -->
+                    <a href="img/BEST2017.webp" data-lightbox="awards" data-title="Excellence Award Islamic Commodity Platform (2017)" class="cert-frame-wrapper">
+                        <img src="img/BEST2017.webp" class="cert-frame-img" alt="Best Award 2017">
+                        <div class="cert-frame-overlay">
+                            <i class="fas fa-search-plus text-white fa-2x"></i>
+                        </div>
+                    </a>
+
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div>
+                            <span class="year-badge">2017</span>
+                            <h6 class="fw-bold mb-1">Excellence Award Islamic Commodity Platform</h6>
+                            <p class="text-muted small mb-3">by Global Banking and Finance Review Awards</p>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="https://www.globalbankingandfinance.com/global-banking-finance-awards-2017-award-winners/"
+                               target="_blank"
+                               class="btn btn-sm btn-outline-primary rounded-pill w-100">
+                                <i class="fas fa-external-link-alt me-1"></i> View Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Award 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="award-card d-flex flex-column h-100">
+                    <!-- Uniform Clickable Frame Container -->
+                    <a href="img/BROKER2017.webp" data-lightbox="awards" data-title="Best Shari'a-compliant Commodity Brokers (2017)" class="cert-frame-wrapper">
+                        <img src="img/BROKER2017.webp" class="cert-frame-img" alt="Best Shariah Broker 2017">
+                        <div class="cert-frame-overlay">
+                            <i class="fas fa-search-plus text-white fa-2x"></i>
+                        </div>
+                    </a>
+
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div>
+                            <span class="year-badge">2017</span>
+                            <h6 class="fw-bold mb-1">Best Shari'a-compliant Commodity Brokers</h6>
+                            <p class="text-muted small mb-3">by Global Islamic Finance Awards</p>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="https://gifaawards.com/winners" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill w-100">
+                                <i class="fas fa-external-link-alt me-1"></i> View Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Award 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="award-card d-flex flex-column h-100">
+                    <!-- Uniform Clickable Frame Container -->
+                    <a href="img/LEADERSHIP2016.webp" data-lightbox="awards" data-title="Market Leadership Award (2016)" class="cert-frame-wrapper">
+                        <img src="img/LEADERSHIP2016.webp" class="cert-frame-img" alt="Leadership Award 2016">
+                        <div class="cert-frame-overlay">
+                            <i class="fas fa-search-plus text-white fa-2x"></i>
+                        </div>
+                    </a>
+
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div>
+                            <span class="year-badge">2016</span>
+                            <h6 class="fw-bold mb-1">Market Leadership Award</h6>
+                            <p class="text-muted small mb-3">by Global Islamic Finance Awards</p>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="https://gifaawards.com/winners" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill w-100">
+                                <i class="fas fa-external-link-alt me-1"></i> View Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ <!-- Award klif -->
+            <div class="col-md-6 col-lg-4">
+                <div class="award-card d-flex flex-column h-100">
+                    <!-- Uniform Clickable Frame Container -->
+                    <a href="img/KLIFF2019.webp" data-lightbox="awards" data-title="Most Outstanding Islamic Commodity Platform 2019" class="cert-frame-wrapper">
+                        <img src="img/KLIFF2019.webp" class="cert-frame-img" alt="Most Outstanding Islamic Commodity Platform 2019">
+                        <div class="cert-frame-overlay">
+                            <i class="fas fa-search-plus text-white fa-2x"></i>
+                        </div>
+                    </a>
+
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div>
+                            <span class="year-badge">2019</span>
+                            <h6 class="fw-bold mb-1">Most Outstanding Islamic Commodity Platform 2019</h6>
+                            <p class="text-muted small mb-3">by Kuala Lumpur Islamic Finance Forum 2019</p>
+                        </div>
+                        <div class="mt-auto">
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Award 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="award-card d-flex flex-column h-100">
+                    <!-- Uniform Clickable Frame Container -->
+                    <a href="img/PLATFORM2020.webp" data-lightbox="awards" data-title="Excellence Award (Islamic Commodity Platform) (2020)" class="cert-frame-wrapper">
+                        <img src="img/PLATFORM2020.webp" class="cert-frame-img" alt="Platform Award 2020">
+                        <div class="cert-frame-overlay">
+                            <i class="fas fa-search-plus text-white fa-2x"></i>
+                        </div>
+                    </a>
+
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div>
+                            <span class="year-badge">2020</span>
+                            <h6 class="fw-bold mb-1">Excellence Award (Islamic Commodity Platform)</h6>
+                            <p class="text-muted small mb-3">by Global Islamic Finance Awards</p>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="https://gifaawards.com/winners" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill w-100">
+                                <i class="fas fa-external-link-alt me-1"></i> View Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Award 2025 -->
+
+ <div class="col-md-6 col-lg-4">
+                <div class="award-card d-flex flex-column h-100">
+                    <!-- Uniform Clickable Frame Container -->
+                    <a href="img/" data-lightbox="awards" data-title="Excellence Award (Shari’a Compliant Commodity Brokerage) 2025" class="cert-frame-wrapper">
+                        <img src="img/" class="cert-frame-img" alt="Shari’a Compliant Commodity Brokerage 2025">
+                        <div class="cert-frame-overlay">
+                            <i class="fas fa-search-plus text-white fa-2x"></i>
+                        </div>
+                    </a>
+
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div>
+                            <span class="year-badge">2025</span>
+                            <h6 class="fw-bold mb-1">Excellence Award (Shari’a Compliant Commodity Brokerage) 2025</h6>
+                            <p class="text-muted small mb-3">by Global Islamic Finance Awards</p>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="https://gifaawards.com/winners" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill w-100">
+                                <i class="fas fa-external-link-alt me-1"></i> View Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Awards List End -->
+    <!-- CTA Section Updated -->
+                <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.3s">
+                    <a href="about.html#about-strengths" class="btn btn-outline-primary btn-premium me-2">
+    <i class="fas fa-arrow-left me-2"></i> Back
+</a>
+                    <a href="contact.html" class="btn btn-primary btn-premium">
+                        Get In Touch <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+            <!-- Footer Start -->
+<div class="container-fluid footer py-3 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container py-2">
+        <div class="row g-3 align-items-center">
+            <div class="col-md-4 col-lg-4">
+                <div class="footer-item d-flex flex-column">
+                    <h6 class="text-white mb-2">AbleAce Raakin</h6>
+                    <p class="text-white-50 small mb-2" style="font-size: 0.8rem;">Delivering Shariah-Based Commodity Trade solutions connecting global markets with ethical, sustainable products.</p>
+                    <div class="d-flex gap-2">
+                       
+                    </div>
+                </div>
+            </div>
+                  <div class="col-md-4 col-lg-4 ps-md-5">
+    <div class="footer-item d-flex flex-column">
+        <h6 class="text-white mb-2">Explore</h6>
+        <div class="row g-0" style="font-size: 0.8rem;">
+            <div class="col-6 d-flex flex-column gap-1">
+                <a href="index.html"><i class="fas fa-angle-right me-1"></i>Home</a>
+                <a href="about.html"><i class="fas fa-angle-right me-1"></i>About Us</a>
+                <a href="service.html"><i class="fas fa-angle-right me-1"></i>ARIIMS</a>
+            </div>
+            <div class="col-6 d-flex flex-column gap-1">
+                <a href="project.html"><i class="fas fa-angle-right me-1"></i>Commodities</a>
+                <a href="404.html"><i class="fas fa-angle-right me-1"></i>Governance</a>
+                <a href="contact.html"><i class="fas fa-angle-right me-1"></i>Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="col-md-4 col-lg-4">
+                <div class="footer-item d-flex flex-column">
+                    <h6 class="text-white mb-2">Contact Info</h6>
+                    <div class="d-flex flex-column gap-1" style="font-size: 0.8rem;">
+                        <a href=""><i class="fa fa-map-marker-alt me-2"></i>AbleAce Raakin Sdn Bhd, Kuala Lumpur</a>
+                        <a href=""><i class="fas fa-envelope me-2"></i>service@ableace.com</a>
+                        <a href=""><i class="fas fa-phone me-2"></i>+603 2161 1164</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="text-white-50 mt-2 mb-0">
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- Copyright Start -->
+<div class="container-fluid copyright py-2">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <span class="text-body" style="font-size: 0.8rem;">&copy; 2026 AbleAce Raakin. All Rights Reserved.</span>
+            </div>
+            <div class="col-md-6 text-center text-md-end" style="font-size: 0.8rem;">
+                Designed By <a class="border-bottom text-primary" href="https://htmlcodex.com">HTML Codex</a> &nbsp;|&nbsp;
+                Distributed By <a class="border-bottom text-primary" href="https://themewagon.com">ThemeWagon</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+        <!-- Back to Top -->
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
